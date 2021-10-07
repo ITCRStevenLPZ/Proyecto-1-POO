@@ -1,0 +1,1145 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_STACK_OVERFLOW (0xc00000fd) at pc=0x000000005c974757, pid=21300, tid=0x0000000000001a54
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_181-b13) (build 1.8.0_181-b13)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.181-b13 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0x214757]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000001bacf6000):  JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_in_vm, id=6740, stack(0x00000001e3aa0000,0x00000001e3ba0000)]
+
+siginfo: ExceptionCode=0xc00000fd, ExceptionInformation=0x0000000000000001 0x00000001e3b9b640 
+
+Registers:
+RAX=0x00000001e3b9b640, RBX=0x0000000000000005, RCX=0x0000000000004000, RDX=0x0000000000000006
+RSP=0x00000001e3b9f640, RBP=0x0000000000000000, RSI=0x00000001e3b9f640, RDI=0x0000000000000005
+R8 =0x0000000000000006, R9 =0x00000001ba780790, R10=0x0000000023aae8f0, R11=0x00000001e3aaa168
+R12=0x00000001ba780790, R13=0x00000001bacf6000, R14=0x00000001e3b9f708, R15=0x0000000023aae8f0
+RIP=0x000000005c974757, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x00000001e3b9f640)
+0x00000001e3b9f640:   0000183457ae2f17 0000000100006bd0
+0x00000001e3b9f650:   00000001bacf6000 00000001ba780790
+0x00000001e3b9f660:   00000000ffffffff 000000005c975687
+0x00000001e3b9f670:   00000001e3b9f770 0000000023aae8f0
+0x00000001e3b9f680:   00000001bacf6000 000000005c821073
+0x00000001e3b9f690:   00000001e3b9f6d0 00000001bacf6000
+0x00000001e3b9f6a0:   00000001e3b9f760 00000001bacf6000
+0x00000001e3b9f6b0:   0000000023aae8f0 00000001bacf6000
+0x00000001e3b9f6c0:   0000000002e76e60 00000001bacf6000
+0x00000001e3b9f6d0:   0000000023aae8f0 00000001bacf6000
+0x00000001e3b9f6e0:   000000001704e1d8 00000001bacf6000
+0x00000001e3b9f6f0:   0000000000000001 0000000023aae8f0
+0x00000001e3b9f700:   00000001bacf6000 0000000173d719f0
+0x00000001e3b9f710:   00000001bacf6000 000000005c8227dd
+0x00000001e3b9f720:   00000001e3b9fa28 0000000100006bd0
+0x00000001e3b9f730:   00000001002fbe18 0000000000000000 
+
+Instructions: (pc=0x000000005c974757)
+0x000000005c974737:   48 89 6c 24 30 33 ed 66 90 e8 9b 4e 08 00 ff c3
+0x000000005c974747:   48 63 c8 48 8b c6 48 0f af cf 48 ff c7 48 2b c1
+0x000000005c974757:   89 28 48 63 c3 48 3b 05 f5 80 59 00 7e db 48 8b
+0x000000005c974767:   6c 24 30 48 8b 5c 24 38 48 8b 74 24 40 48 83 c4 
+
+
+Register to memory mapping:
+
+RAX=0x00000001e3b9b640 is pointing into the stack for thread: 0x00000001bacf6000
+RBX=0x0000000000000005 is an unknown value
+RCX=0x0000000000004000 is an unknown value
+RDX=0x0000000000000006 is an unknown value
+RSP=0x00000001e3b9f640 is pointing into the stack for thread: 0x00000001bacf6000
+RBP=0x0000000000000000 is an unknown value
+RSI=0x00000001e3b9f640 is pointing into the stack for thread: 0x00000001bacf6000
+RDI=0x0000000000000005 is an unknown value
+R8 =0x0000000000000006 is an unknown value
+R9 =0x00000001ba780790 is an unknown value
+R10={method} {0x0000000023aae8f8} 'run' '()V' in 'com/sun/media/jfxmediaimpl/NativeMediaPlayer$EventQueueThread'
+R11=0x00000001e3aaa168 is pointing into the stack for thread: 0x00000001bacf6000
+R12=0x00000001ba780790 is an unknown value
+R13=0x00000001bacf6000 is a thread
+R14=0x00000001e3b9f708 is pointing into the stack for thread: 0x00000001bacf6000
+R15={method} {0x0000000023aae8f8} 'run' '()V' in 'com/sun/media/jfxmediaimpl/NativeMediaPlayer$EventQueueThread'
+
+
+Stack: [0x00000001e3aa0000,0x00000001e3ba0000],  sp=0x00000001e3b9f640,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x00000001bacf6000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_in_vm, id=6740, stack(0x00000001e3aa0000,0x00000001e3ba0000)]
+  0x00000001bacfc000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16192, stack(0x00000001e34a0000,0x00000001e35a0000)]
+  0x00000001bacfa000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16068, stack(0x00000001e2ea0000,0x00000001e2fa0000)]
+  0x00000001bacf0000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15808, stack(0x00000001e27a0000,0x00000001e28a0000)]
+  0x00000001bacf9000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21188, stack(0x00000001e22a0000,0x00000001e23a0000)]
+  0x00000001bacf7000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20744, stack(0x00000001e1ba0000,0x00000001e1ca0000)]
+  0x00000001bacf5800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15696, stack(0x00000001e15a0000,0x00000001e16a0000)]
+  0x00000001bacf1000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15452, stack(0x00000001e10a0000,0x00000001e11a0000)]
+  0x00000001bacf4800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=428, stack(0x00000001e09a0000,0x00000001e0aa0000)]
+  0x00000001bacf2800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11492, stack(0x00000001e04a0000,0x00000001e05a0000)]
+  0x00000001bacf4000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13140, stack(0x00000001dfea0000,0x00000001dffa0000)]
+  0x00000001bacf3000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=5384, stack(0x00000001df7a0000,0x00000001df8a0000)]
+  0x00000001bacf1800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=1612, stack(0x00000001df2a0000,0x00000001df3a0000)]
+  0x00000001b9f5e800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=5760, stack(0x00000001deba0000,0x00000001deca0000)]
+  0x00000001b9f48800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=1780, stack(0x00000001de6a0000,0x00000001de7a0000)]
+  0x00000001b9f5a000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14384, stack(0x00000001de0a0000,0x00000001de1a0000)]
+  0x00000001b9f57800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25508, stack(0x00000001dd9a0000,0x00000001ddaa0000)]
+  0x00000001b9f5d800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7552, stack(0x00000001dd4a0000,0x00000001dd5a0000)]
+  0x00000001b9f58800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=9296, stack(0x00000001dcea0000,0x00000001dcfa0000)]
+  0x00000001b9f5b800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14608, stack(0x00000001dc7a0000,0x00000001dc8a0000)]
+  0x00000001b9f5a800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6504, stack(0x00000001dc2a0000,0x00000001dc3a0000)]
+  0x00000001b9f5d000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7532, stack(0x00000001dbba0000,0x00000001dbca0000)]
+  0x00000001b9f5c000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4032, stack(0x00000001db6a0000,0x00000001db7a0000)]
+  0x00000001b9f4f800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=10548, stack(0x00000001db0a0000,0x00000001db1a0000)]
+  0x00000001b9f53000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20924, stack(0x00000001da9a0000,0x00000001daaa0000)]
+  0x00000001b9f59000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2496, stack(0x00000001da4a0000,0x00000001da5a0000)]
+  0x00000001b9f57000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11428, stack(0x00000001d8dd0000,0x00000001d8ed0000)]
+  0x00000001b9f56000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=10952, stack(0x00000001d88d0000,0x00000001d89d0000)]
+  0x00000001b9f54800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13000, stack(0x00000001d82d0000,0x00000001d83d0000)]
+  0x00000001b9f4e800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6828, stack(0x00000001d6c00000,0x00000001d6d00000)]
+  0x00000001b9f51000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=3244, stack(0x00000001d6700000,0x00000001d6800000)]
+  0x00000001b9f54000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=8828, stack(0x00000001d6000000,0x00000001d6100000)]
+  0x00000001b9f55800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6580, stack(0x00000001d5b00000,0x00000001d5c00000)]
+  0x00000001b9f52800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2840, stack(0x00000001d5500000,0x00000001d5600000)]
+  0x00000001b9f51800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7648, stack(0x00000001d4e00000,0x00000001d4f00000)]
+  0x00000001b9f50000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=1328, stack(0x00000001d4900000,0x00000001d4a00000)]
+  0x00000001b9f49800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4072, stack(0x00000001d4200000,0x00000001d4300000)]
+  0x00000001b9f48000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13424, stack(0x00000001d3d00000,0x00000001d3e00000)]
+  0x00000001b9f4e000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=5672, stack(0x00000001d3700000,0x00000001d3800000)]
+  0x00000001b9f3e000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13128, stack(0x00000001d3000000,0x00000001d3100000)]
+  0x00000001b9f4c800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12180, stack(0x00000001d2b00000,0x00000001d2c00000)]
+  0x00000001b9f4b800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21320, stack(0x00000001d2400000,0x00000001d2500000)]
+  0x00000001b9f4b000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25084, stack(0x00000001d1f00000,0x00000001d2000000)]
+  0x00000001b9f4a000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25276, stack(0x00000001d16d0000,0x00000001d17d0000)]
+  0x00000001b9f47000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21264, stack(0x00000001d0fd0000,0x00000001d10d0000)]
+  0x00000001b9f4d000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21196, stack(0x00000001d0ad0000,0x00000001d0bd0000)]
+  0x00000001b9f40800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21360, stack(0x00000001d03d0000,0x00000001d04d0000)]
+  0x00000001b9f46800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25032, stack(0x00000001cfed0000,0x00000001cffd0000)]
+  0x00000001b9f45800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25596, stack(0x00000001cf8d0000,0x00000001cf9d0000)]
+  0x00000001b9f3f000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24960, stack(0x00000001cf1d0000,0x00000001cf2d0000)]
+  0x00000001b9f42000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24840, stack(0x00000001cecd0000,0x00000001cedd0000)]
+  0x00000001b9f3d800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24440, stack(0x00000001ce6d0000,0x00000001ce7d0000)]
+  0x00000001b9f41000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=9348, stack(0x00000001cdfd0000,0x00000001ce0d0000)]
+  0x00000001b9f45000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25524, stack(0x00000001cdad0000,0x00000001cdbd0000)]
+  0x00000001b9f43800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15184, stack(0x00000001cd4d0000,0x00000001cd5d0000)]
+  0x00000001b9f44000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21004, stack(0x00000001ccdd0000,0x00000001cced0000)]
+  0x00000001b9f42800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25476, stack(0x00000001cc8d0000,0x00000001cc9d0000)]
+  0x00000001b9f3c800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19664, stack(0x00000001cc2d0000,0x00000001cc3d0000)]
+  0x00000001b9f39000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25464, stack(0x00000001cbcd0000,0x00000001cbdd0000)]
+  0x00000001b9f3f800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21064, stack(0x00000001cb5d0000,0x00000001cb6d0000)]
+  0x00000001b9f34000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25416, stack(0x00000001ca000000,0x00000001ca100000)]
+  0x00000001b9f37800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25396, stack(0x00000001c9b00000,0x00000001c9c00000)]
+  0x00000001b9f3c000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25356, stack(0x00000001c9400000,0x00000001c9500000)]
+  0x00000001b9f35800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25312, stack(0x00000001c8f00000,0x00000001c9000000)]
+  0x00000001b9f3a800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25316, stack(0x00000001c8700000,0x00000001c8800000)]
+  0x00000001b9f3b000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25280, stack(0x00000001c8300000,0x00000001c8400000)]
+  0x00000001b9f38000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25264, stack(0x00000001c7d00000,0x00000001c7e00000)]
+  0x00000001b9f36800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25196, stack(0x00000001c7700000,0x00000001c7800000)]
+  0x00000001b9f32800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25188, stack(0x00000001c7000000,0x00000001c7100000)]
+  0x00000001b9f39800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25168, stack(0x00000001c6b00000,0x00000001c6c00000)]
+  0x00000001b9f35000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25136, stack(0x00000001c6500000,0x00000001c6600000)]
+  0x00000001b9f2e000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25108, stack(0x00000001c5e00000,0x00000001c5f00000)]
+  0x00000001b9f2a800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25080, stack(0x00000001c5900000,0x00000001c5a00000)]
+  0x00000001b9f2c800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25036, stack(0x00000001c5100000,0x00000001c5200000)]
+  0x00000001b9f32000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=25016, stack(0x00000001c4c00000,0x00000001c4d00000)]
+  0x00000001b9f33800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24988, stack(0x00000001c4600000,0x00000001c4700000)]
+  0x00000001b9f31000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24972, stack(0x00000001c4000000,0x00000001c4100000)]
+  0x00000001b9f2f800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24924, stack(0x00000001c3900000,0x00000001c3a00000)]
+  0x00000001b9f2d800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24896, stack(0x00000001c3400000,0x00000001c3500000)]
+  0x00000001b9f30800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24872, stack(0x00000001c2e00000,0x00000001c2f00000)]
+  0x00000001b9f2c000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24844, stack(0x00000001c2800000,0x00000001c2900000)]
+  0x00000001b9f2f000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24812, stack(0x00000001c2200000,0x00000001c2300000)]
+  0x00000001b9f24800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24776, stack(0x00000001c1a00000,0x00000001c1b00000)]
+  0x00000001b9f29000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24744, stack(0x00000001c1400000,0x00000001c1500000)]
+  0x00000001b9f2b000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24724, stack(0x00000001c0f00000,0x00000001c1000000)]
+  0x00000001b9f29800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24692, stack(0x00000001c0b00000,0x00000001c0c00000)]
+  0x00000001b9f28000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24672, stack(0x00000001c0500000,0x00000001c0600000)]
+  0x00000001b9f23000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24644, stack(0x00000001bfe00000,0x00000001bff00000)]
+  0x00000001b9f22000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24616, stack(0x00000001bf900000,0x00000001bfa00000)]
+  0x00000001b9f20800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24580, stack(0x00000001bf200000,0x00000001bf300000)]
+  0x00000001b9f26800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23860, stack(0x00000001bed00000,0x00000001bee00000)]
+  0x00000001b9f23800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24512, stack(0x00000001be600000,0x00000001be700000)]
+  0x00000001b9f26000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24412, stack(0x00000001be100000,0x00000001be200000)]
+  0x00000001b9f27800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23988, stack(0x00000001bdb00000,0x00000001bdc00000)]
+  0x00000001b9f1e800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23916, stack(0x00000001bd1a0000,0x00000001bd2a0000)]
+  0x00000001b9f21800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23840, stack(0x00000001bcca0000,0x00000001bcda0000)]
+  0x00000001b9f1f000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24004, stack(0x00000001bc6a0000,0x00000001bc7a0000)]
+  0x00000001b9f20000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24556, stack(0x00000001bc0a0000,0x00000001bc1a0000)]
+  0x00000001b9f25000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24508, stack(0x00000001bb6a0000,0x00000001bb7a0000)]
+  0x00000001744c3000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24488, stack(0x00000001bb2a0000,0x00000001bb3a0000)]
+  0x0000000173e5f000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24456, stack(0x00000001b9dd0000,0x00000001b9ed0000)]
+  0x00000001744db000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24452, stack(0x00000001b98d0000,0x00000001b99d0000)]
+  0x00000001744d6000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24436, stack(0x00000001b92d0000,0x00000001b93d0000)]
+  0x00000001744d9000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24388, stack(0x00000001b8cd0000,0x00000001b8dd0000)]
+  0x00000001744d7800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24352, stack(0x00000001b86d0000,0x00000001b87d0000)]
+  0x00000001744da800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24284, stack(0x00000001b7fd0000,0x00000001b80d0000)]
+  0x00000001744d6800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24272, stack(0x00000001b7ad0000,0x00000001b7bd0000)]
+  0x00000001744cd000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24216, stack(0x00000001b73d0000,0x00000001b74d0000)]
+  0x00000001744d5000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24208, stack(0x00000001b6ed0000,0x00000001b6fd0000)]
+  0x00000001744d9800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24184, stack(0x00000001b68d0000,0x00000001b69d0000)]
+  0x00000001744cd800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24152, stack(0x00000001b61d0000,0x00000001b62d0000)]
+  0x00000001744d4800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24132, stack(0x00000001b5cd0000,0x00000001b5dd0000)]
+  0x00000001744cc000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24100, stack(0x00000001b55d0000,0x00000001b56d0000)]
+  0x00000001744d3800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24044, stack(0x00000001b50d0000,0x00000001b51d0000)]
+  0x00000001744d2000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24036, stack(0x00000001b4ad0000,0x00000001b4bd0000)]
+  0x00000001744d1800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24008, stack(0x00000001b43d0000,0x00000001b44d0000)]
+  0x00000001744cf000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=24000, stack(0x00000001b3ed0000,0x00000001b3fd0000)]
+  0x00000001744ce800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23944, stack(0x00000001b37d0000,0x00000001b38d0000)]
+  0x00000001744d0800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23928, stack(0x00000001b32d0000,0x00000001b33d0000)]
+  0x00000001744d3000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23900, stack(0x00000001b2dd0000,0x00000001b2ed0000)]
+  0x00000001744d0000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23864, stack(0x00000001b25d0000,0x00000001b26d0000)]
+  0x00000001744cb800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23832, stack(0x00000001b20d0000,0x00000001b21d0000)]
+  0x00000001744ca800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23808, stack(0x00000001b19d0000,0x00000001b1ad0000)]
+  0x00000001744c9000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23760, stack(0x00000001b14d0000,0x00000001b15d0000)]
+  0x00000001744ca000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23748, stack(0x00000001b0dd0000,0x00000001b0ed0000)]
+  0x00000001744bf000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23724, stack(0x00000001af900000,0x00000001afa00000)]
+  0x00000001744c7800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23708, stack(0x00000001af300000,0x00000001af400000)]
+  0x00000001744c3800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23664, stack(0x00000001aec00000,0x00000001aed00000)]
+  0x00000001744c8800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23616, stack(0x00000001ae700000,0x00000001ae800000)]
+  0x00000001744c7000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23604, stack(0x00000001ae000000,0x00000001ae100000)]
+  0x00000001744c5000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23580, stack(0x00000001adb00000,0x00000001adc00000)]
+  0x00000001744c6000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22592, stack(0x00000001ad500000,0x00000001ad600000)]
+  0x00000001744c4800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23392, stack(0x00000001ace00000,0x00000001acf00000)]
+  0x00000001744c2000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23340, stack(0x00000001ac900000,0x00000001aca00000)]
+  0x00000001744bc000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23096, stack(0x00000001ac200000,0x00000001ac300000)]
+  0x00000001744c0800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23044, stack(0x00000001abd00000,0x00000001abe00000)]
+  0x00000001744c1800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22832, stack(0x00000001ab700000,0x00000001ab800000)]
+  0x00000001744b7000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22672, stack(0x00000001ab000000,0x00000001ab100000)]
+  0x00000001744bd000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23528, stack(0x00000001aab00000,0x00000001aac00000)]
+  0x00000001744be800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23516, stack(0x00000001aa500000,0x00000001aa600000)]
+  0x00000001744ba800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23492, stack(0x00000001a9f00000,0x00000001aa000000)]
+  0x00000001744ba000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23452, stack(0x00000001a9800000,0x00000001a9900000)]
+  0x00000001744bd800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23424, stack(0x00000001a9300000,0x00000001a9400000)]
+  0x00000001744c0000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23384, stack(0x00000001a8d00000,0x00000001a8e00000)]
+  0x00000001744b3000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23400, stack(0x00000001a8600000,0x00000001a8700000)]
+  0x00000001744b9000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23332, stack(0x00000001a7ed0000,0x00000001a7fd0000)]
+  0x00000001744b4800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23336, stack(0x00000001a77d0000,0x00000001a78d0000)]
+  0x00000001744b5800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23288, stack(0x00000001a72d0000,0x00000001a73d0000)]
+  0x00000001744b6000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23256, stack(0x00000001a6bd0000,0x00000001a6cd0000)]
+  0x00000001744ad000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23240, stack(0x00000001a66d0000,0x00000001a67d0000)]
+  0x00000001744b8800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23204, stack(0x00000001a60d0000,0x00000001a61d0000)]
+  0x00000001744bb800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23212, stack(0x00000001a59d0000,0x00000001a5ad0000)]
+  0x00000001744ab000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23108, stack(0x00000001a54d0000,0x00000001a55d0000)]
+  0x00000001744b4000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23068, stack(0x00000001a4cd0000,0x00000001a4dd0000)]
+  0x00000001744b2800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23092, stack(0x00000001a48d0000,0x00000001a49d0000)]
+  0x00000001744b7800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23052, stack(0x00000001a41d0000,0x00000001a42d0000)]
+  0x00000001744b1800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23028, stack(0x00000001a3cd0000,0x00000001a3dd0000)]
+  0x00000001744ac800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=23008, stack(0x00000001a36d0000,0x00000001a37d0000)]
+  0x00000001744b1000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22996, stack(0x00000001a2fd0000,0x00000001a30d0000)]
+  0x00000001744b0000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22940, stack(0x00000001a2ad0000,0x00000001a2bd0000)]
+  0x00000001744a9800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22912, stack(0x00000001a23d0000,0x00000001a24d0000)]
+  0x00000001744af800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22892, stack(0x00000001a1ed0000,0x00000001a1fd0000)]
+  0x00000001744ae800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22856, stack(0x00000001a17d0000,0x00000001a18d0000)]
+  0x00000001744a8800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22828, stack(0x00000001a12d0000,0x00000001a13d0000)]
+  0x00000001744ab800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22796, stack(0x00000001a0cd0000,0x00000001a0dd0000)]
+  0x00000001744ae000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22756, stack(0x00000001a05d0000,0x00000001a06d0000)]
+  0x00000001744a6800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22612, stack(0x00000001a00d0000,0x00000001a01d0000)]
+  0x000000017449d800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22584, stack(0x000000019fad0000,0x000000019fbd0000)]
+  0x00000001744a5800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22576, stack(0x000000019f2d0000,0x000000019f3d0000)]
+  0x00000001744aa000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22552, stack(0x000000019edd0000,0x000000019eed0000)]
+  0x00000001744a7000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22100, stack(0x000000019e6d0000,0x000000019e7d0000)]
+  0x00000001744a8000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22412, stack(0x000000019e0d0000,0x000000019e1d0000)]
+  0x000000017449e000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22320, stack(0x000000019dcd0000,0x000000019ddd0000)]
+  0x00000001744a5000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22148, stack(0x000000019d6d0000,0x000000019d7d0000)]
+  0x00000001744a0800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21960, stack(0x000000019cfd0000,0x000000019d0d0000)]
+  0x000000017449c800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21820, stack(0x000000019cad0000,0x000000019cbd0000)]
+  0x00000001744a4000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21672, stack(0x000000019c4d0000,0x000000019c5d0000)]
+  0x00000001744a3800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22504, stack(0x000000019bbd0000,0x000000019bcd0000)]
+  0x00000001744a2000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22488, stack(0x000000019b7d0000,0x000000019b8d0000)]
+  0x00000001744a2800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22456, stack(0x000000019b0d0000,0x000000019b1d0000)]
+  0x000000017449f800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22460, stack(0x000000019abd0000,0x000000019acd0000)]
+  0x00000001744a1000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22712, stack(0x000000019a3d0000,0x000000019a4d0000)]
+  0x000000017449f000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22732, stack(0x0000000199ed0000,0x0000000199fd0000)]
+  0x000000017449c000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22356, stack(0x00000001998d0000,0x00000001999d0000)]
+  0x000000005e414000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22344, stack(0x00000001994d0000,0x00000001995d0000)]
+  0x0000000173e54800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22288, stack(0x0000000198dd0000,0x0000000198ed0000)]
+  0x0000000173e60800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22260, stack(0x00000001988d0000,0x00000001989d0000)]
+  0x0000000173e63000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22240, stack(0x00000001982d0000,0x00000001983d0000)]
+  0x0000000173e64000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22220, stack(0x0000000197ad0000,0x0000000197bd0000)]
+  0x0000000173e5e800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22216, stack(0x00000001976d0000,0x00000001977d0000)]
+  0x0000000173e65800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22172, stack(0x00000001970d0000,0x00000001971d0000)]
+  0x0000000173e64800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22744, stack(0x00000001969d0000,0x0000000196ad0000)]
+  0x0000000173e62800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22124, stack(0x00000001964d0000,0x00000001965d0000)]
+  0x0000000173e5a800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22088, stack(0x0000000194e00000,0x0000000194f00000)]
+  0x0000000173e60000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22060, stack(0x0000000194900000,0x0000000194a00000)]
+  0x0000000173e61800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22020, stack(0x0000000194200000,0x0000000194300000)]
+  0x0000000173e56000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22012, stack(0x0000000193b00000,0x0000000193c00000)]
+  0x0000000173e5d800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22704, stack(0x0000000193500000,0x0000000193600000)]
+  0x0000000173e5d000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21944, stack(0x0000000192f00000,0x0000000193000000)]
+  0x0000000173e59000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21916, stack(0x0000000192600000,0x0000000192700000)]
+  0x0000000173e5b800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21900, stack(0x0000000192200000,0x0000000192300000)]
+  0x0000000173e5c000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21856, stack(0x0000000191c00000,0x0000000191d00000)]
+  0x0000000173e57800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21808, stack(0x0000000191500000,0x0000000191600000)]
+  0x0000000173e57000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21812, stack(0x0000000191100000,0x0000000191200000)]
+  0x0000000173e58800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21784, stack(0x0000000190b00000,0x0000000190c00000)]
+  0x0000000173e5a000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21748, stack(0x0000000190400000,0x0000000190500000)]
+  0x0000000173e50000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21728, stack(0x000000018ff00000,0x0000000190000000)]
+  0x0000000173e55800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22724, stack(0x000000018f900000,0x000000018fa00000)]
+  0x0000000173e52800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21664, stack(0x000000018f200000,0x000000018f300000)]
+  0x0000000173e51000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21636, stack(0x000000018ed00000,0x000000018ee00000)]
+  0x0000000173e54000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21604, stack(0x000000018e600000,0x000000018e700000)]
+  0x0000000173e53000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21584, stack(0x000000018e100000,0x000000018e200000)]
+  0x0000000173e51800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21544, stack(0x000000018da00000,0x000000018db00000)]
+  0x0000000173e49800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21528, stack(0x000000018d500000,0x000000018d600000)]
+  0x0000000173e4f800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13592, stack(0x000000018ce00000,0x000000018cf00000)]
+  0x0000000173e48800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4944, stack(0x000000018c900000,0x000000018ca00000)]
+  0x0000000173e4e800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21080, stack(0x000000018c200000,0x000000018c300000)]
+  0x0000000173e4b000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20544, stack(0x000000018bd00000,0x000000018be00000)]
+  0x0000000173e40800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19984, stack(0x000000018b700000,0x000000018b800000)]
+  0x0000000173e48000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17840, stack(0x000000018b000000,0x000000018b100000)]
+  0x0000000173e4e000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17056, stack(0x000000018a900000,0x000000018aa00000)]
+  0x0000000173e4b800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16976, stack(0x000000018a500000,0x000000018a600000)]
+  0x0000000173e4d000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6920, stack(0x0000000189e00000,0x0000000189f00000)]
+  0x0000000173e45800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13900, stack(0x0000000189800000,0x0000000189900000)]
+  0x0000000173e4a000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22692, stack(0x0000000189100000,0x0000000189200000)]
+  0x0000000173e4c800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14064, stack(0x0000000188d00000,0x0000000188e00000)]
+  0x0000000173e47000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12840, stack(0x0000000188600000,0x0000000188700000)]
+  0x0000000173e3c800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14544, stack(0x0000000188100000,0x0000000188200000)]
+  0x0000000173e46800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21488, stack(0x0000000187b00000,0x0000000187c00000)]
+  0x0000000173e45000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=5272, stack(0x0000000187400000,0x0000000187500000)]
+  0x0000000173e3f000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21136, stack(0x0000000186f00000,0x0000000187000000)]
+  0x0000000173e44000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=1224, stack(0x0000000186800000,0x0000000186900000)]
+  0x0000000173e3e000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20856, stack(0x0000000186300000,0x0000000186400000)]
+  0x0000000173e41000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20740, stack(0x0000000185c00000,0x0000000185d00000)]
+  0x0000000173e43800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20524, stack(0x0000000185700000,0x0000000185800000)]
+  0x0000000173e3d800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20120, stack(0x0000000185100000,0x0000000185200000)]
+  0x0000000173e42000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20296, stack(0x0000000184a00000,0x0000000184b00000)]
+  0x0000000173e39800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20076, stack(0x0000000184500000,0x0000000184600000)]
+  0x0000000173e42800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19928, stack(0x0000000183d00000,0x0000000183e00000)]
+  0x0000000173e3c000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19764, stack(0x0000000183900000,0x0000000183a00000)]
+  0x0000000173e3a800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19512, stack(0x0000000183200000,0x0000000183300000)]
+  0x0000000173e3b000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19080, stack(0x0000000182d00000,0x0000000182e00000)]
+  0x0000000173e36000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19388, stack(0x0000000182700000,0x0000000182800000)]
+  0x0000000173e39000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19096, stack(0x000000017d800000,0x000000017d900000)]
+  0x0000000173e38000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19020, stack(0x00000001711d0000,0x00000001712d0000)]
+  0x0000000173e3f800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18704, stack(0x000000015d8a0000,0x000000015d9a0000)]
+  0x0000000173e30800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18444, stack(0x00000001549a0000,0x0000000154aa0000)]
+  0x0000000173e37800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18148, stack(0x000000017fc00000,0x000000017fd00000)]
+  0x0000000173e2f800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18356, stack(0x000000017e300000,0x000000017e400000)]
+  0x0000000173e36800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18064, stack(0x000000017bf00000,0x000000017c000000)]
+  0x0000000173e2d800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17868, stack(0x0000000179600000,0x0000000179700000)]
+  0x0000000173e31000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17728, stack(0x0000000177800000,0x0000000177900000)]
+  0x0000000173e2e000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17428, stack(0x00000001735d0000,0x00000001736d0000)]
+  0x0000000173e35000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17096, stack(0x0000000171dd0000,0x0000000171ed0000)]
+  0x0000000173e34800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17376, stack(0x000000016f8d0000,0x000000016f9d0000)]
+  0x0000000173e33800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16924, stack(0x000000016cfd0000,0x000000016d0d0000)]
+  0x0000000173e2c800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16900, stack(0x000000016a200000,0x000000016a300000)]
+  0x0000000173e2f000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16628, stack(0x0000000167100000,0x0000000167200000)]
+  0x0000000173e26000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16580, stack(0x0000000165900000,0x0000000165a00000)]
+  0x0000000173e33000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15380, stack(0x0000000162a00000,0x0000000162b00000)]
+  0x0000000173e32000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16268, stack(0x0000000160fa0000,0x00000001610a0000)]
+  0x0000000173e26800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15928, stack(0x000000015e5a0000,0x000000015e6a0000)]
+  0x0000000173e2a800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15848, stack(0x000000015c6a0000,0x000000015c7a0000)]
+  0x0000000173e2b000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15680, stack(0x000000015a2a0000,0x000000015a3a0000)]
+  0x0000000173e29000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12196, stack(0x0000000156ca0000,0x0000000156da0000)]
+  0x0000000173e29800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6228, stack(0x00000001553a0000,0x00000001554a0000)]
+  0x0000000173e2c000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14220, stack(0x00000001526d0000,0x00000001527d0000)]
+  0x0000000173e28000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13396, stack(0x00000000738d0000,0x00000000739d0000)]
+  0x0000000173e27800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13048, stack(0x0000000062e00000,0x0000000062f00000)]
+  0x000000005e412000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14324, stack(0x0000000054fd0000,0x00000000550d0000)]
+  0x00000000195ed800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2984, stack(0x000000003edd0000,0x000000003eed0000)]
+  0x000000005e423000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7244, stack(0x0000000031ed0000,0x0000000031fd0000)]
+  0x000000005e40e000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=5188, stack(0x00000000283d0000,0x00000000284d0000)]
+  0x000000005e40e800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=5884, stack(0x000000017fe00000,0x000000017ff00000)]
+  0x000000005e415000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11080, stack(0x000000017f700000,0x000000017f800000)]
+  0x000000005e413800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14672, stack(0x000000017f200000,0x000000017f300000)]
+  0x000000005e409800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14884, stack(0x000000017eb00000,0x000000017ec00000)]
+  0x000000005e412800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4952, stack(0x000000017e500000,0x000000017e600000)]
+  0x000000005e411000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15176, stack(0x000000017e000000,0x000000017e100000)]
+  0x000000005e410000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6676, stack(0x000000017da00000,0x000000017db00000)]
+  0x000000005e40d000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14992, stack(0x000000017d200000,0x000000017d300000)]
+  0x000000005e40c800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7876, stack(0x000000017ce00000,0x000000017cf00000)]
+  0x000000005e40f800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12904, stack(0x000000017c800000,0x000000017c900000)]
+  0x000000005e405000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14780, stack(0x000000017c100000,0x000000017c200000)]
+  0x000000005e404000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7232, stack(0x000000017bc00000,0x000000017bd00000)]
+  0x000000005e407000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2908, stack(0x000000017b500000,0x000000017b600000)]
+  0x000000005e408800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13292, stack(0x000000017b000000,0x000000017b100000)]
+  0x000000005e40a000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7420, stack(0x000000017a900000,0x000000017aa00000)]
+  0x000000005e406800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=8152, stack(0x000000017a400000,0x000000017a500000)]
+  0x000000005e40b800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=8440, stack(0x0000000179d00000,0x0000000179e00000)]
+  0x000000005e40b000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7292, stack(0x0000000179800000,0x0000000179900000)]
+  0x000000005e405800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=9396, stack(0x0000000179200000,0x0000000179300000)]
+  0x000000005e408000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=5676, stack(0x0000000178b00000,0x0000000178c00000)]
+  0x000000005e3fe000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6804, stack(0x0000000178600000,0x0000000178700000)]
+  0x000000005e3fc800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=1720, stack(0x0000000177f00000,0x0000000178000000)]
+  0x000000005e3fd800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11108, stack(0x0000000177a00000,0x0000000177b00000)]
+  0x000000005e403800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14528, stack(0x0000000177400000,0x0000000177500000)]
+  0x000000005e3ff800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14460, stack(0x0000000176c00000,0x0000000176d00000)]
+  0x000000005e402800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20696, stack(0x00000001764a0000,0x00000001765a0000)]
+  0x000000005e3fb000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21368, stack(0x0000000175ea0000,0x0000000175fa0000)]
+  0x000000005e3fc000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21108, stack(0x00000001759a0000,0x0000000175aa0000)]
+  0x000000005e401000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21088, stack(0x00000001752a0000,0x00000001753a0000)]
+  0x000000005e3ff000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21112, stack(0x0000000174da0000,0x0000000174ea0000)]
+  0x000000005e402000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21084, stack(0x00000001737d0000,0x00000001738d0000)]
+  0x000000005e3f4800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=22760, stack(0x00000001730d0000,0x00000001731d0000)]
+  0x000000005e400800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15348, stack(0x0000000172bd0000,0x0000000172cd0000)]
+  0x000000005e3fa800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4532, stack(0x00000001723d0000,0x00000001724d0000)]
+  0x000000005e3f9800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4748, stack(0x0000000171fd0000,0x00000001720d0000)]
+  0x000000005e3f2000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14004, stack(0x00000001718d0000,0x00000001719d0000)]
+  0x000000005e3f7800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21040, stack(0x00000001713d0000,0x00000001714d0000)]
+  0x000000005e3f8000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=3988, stack(0x0000000170dd0000,0x0000000170ed0000)]
+  0x000000005e3f0000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14644, stack(0x00000001706d0000,0x00000001707d0000)]
+  0x000000005e3f6800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13916, stack(0x00000001701d0000,0x00000001702d0000)]
+  0x000000005e3f9000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7212, stack(0x000000016f9d0000,0x000000016fad0000)]
+  0x000000005e3f3800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=3108, stack(0x000000016f5d0000,0x000000016f6d0000)]
+  0x000000005e3f6000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=10160, stack(0x000000016efd0000,0x000000016f0d0000)]
+  0x000000005e3f5000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20976, stack(0x000000016e8d0000,0x000000016e9d0000)]
+  0x000000005e3f1800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12976, stack(0x000000016e3d0000,0x000000016e4d0000)]
+  0x000000005e3f0800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12860, stack(0x000000016dbd0000,0x000000016dcd0000)]
+  0x000000005e3f3000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20900, stack(0x000000016d6d0000,0x000000016d7d0000)]
+  0x000000005e3e9000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20880, stack(0x000000016d1d0000,0x000000016d2d0000)]
+  0x000000005e3ec000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20820, stack(0x000000016bb00000,0x000000016bc00000)]
+  0x000000005e3e7000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20832, stack(0x000000016b600000,0x000000016b700000)]
+  0x000000005e3e8800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20764, stack(0x000000016b000000,0x000000016b100000)]
+  0x000000005e3ee800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20772, stack(0x000000016a800000,0x000000016a900000)]
+  0x000000005e3ef000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20720, stack(0x000000016a400000,0x000000016a500000)]
+  0x000000005e3ed800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20692, stack(0x0000000169c00000,0x0000000169d00000)]
+  0x000000005e3ea000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20664, stack(0x0000000169800000,0x0000000169900000)]
+  0x000000005e3ed000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20624, stack(0x0000000169100000,0x0000000169200000)]
+  0x000000005e3e5800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20560, stack(0x0000000168c00000,0x0000000168d00000)]
+  0x000000005e3e7800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20520, stack(0x0000000168500000,0x0000000168600000)]
+  0x000000005e3ea800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20616, stack(0x0000000168000000,0x0000000168100000)]
+  0x000000005e3eb800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=21164, stack(0x0000000167900000,0x0000000167a00000)]
+  0x000000005e3e6000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20340, stack(0x0000000167400000,0x0000000167500000)]
+  0x000000005e425800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20144, stack(0x0000000166e00000,0x0000000166f00000)]
+  0x000000005e421000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19952, stack(0x0000000166700000,0x0000000166800000)]
+  0x000000005e41e000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19756, stack(0x0000000166200000,0x0000000166300000)]
+  0x000000005e424800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19496, stack(0x0000000165b00000,0x0000000165c00000)]
+  0x000000005e416800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20448, stack(0x0000000165600000,0x0000000165700000)]
+  0x000000005e41f800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20324, stack(0x0000000164e00000,0x0000000164f00000)]
+  0x000000005e421800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20288, stack(0x0000000164a00000,0x0000000164b00000)]
+  0x000000005e424000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20276, stack(0x0000000164300000,0x0000000164400000)]
+  0x000000005e422800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20248, stack(0x0000000163e00000,0x0000000163f00000)]
+  0x000000005e41b000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20220, stack(0x0000000163800000,0x0000000163900000)]
+  0x000000005e41e800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20156, stack(0x0000000163100000,0x0000000163200000)]
+  0x000000005e41d000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20148, stack(0x0000000162c00000,0x0000000162d00000)]
+  0x000000005e420000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20128, stack(0x0000000162500000,0x0000000162600000)]
+  0x000000005e415800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20088, stack(0x0000000162000000,0x0000000162100000)]
+  0x000000005e419800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20040, stack(0x0000000161900000,0x0000000161a00000)]
+  0x000000005e41a000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20032, stack(0x00000001611a0000,0x00000001612a0000)]
+  0x000000005e41c800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19988, stack(0x0000000160ba0000,0x0000000160ca0000)]
+  0x000000005e41b800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19944, stack(0x00000001604a0000,0x00000001605a0000)]
+  0x000000005e418800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19896, stack(0x000000015ffa0000,0x00000001600a0000)]
+  0x000000005e418000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19884, stack(0x000000015f8a0000,0x000000015f9a0000)]
+  0x000000005e417000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19864, stack(0x000000015f3a0000,0x000000015f4a0000)]
+  0x000000005e086800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19820, stack(0x000000015eca0000,0x000000015eda0000)]
+  0x00000000195ef000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19760, stack(0x000000015e6a0000,0x000000015e7a0000)]
+  0x00000000195ea800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19748, stack(0x000000015e1a0000,0x000000015e2a0000)]
+  0x00000000195ec800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19740, stack(0x000000015d9a0000,0x000000015daa0000)]
+  0x00000000195ec000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19696, stack(0x000000015d5a0000,0x000000015d6a0000)]
+  0x00000000195f0800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19648, stack(0x000000015cea0000,0x000000015cfa0000)]
+  0x00000000195e4800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19624, stack(0x000000015c7a0000,0x000000015c8a0000)]
+  0x00000000195ee000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19596, stack(0x000000015c3a0000,0x000000015c4a0000)]
+  0x00000000195f1800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19556, stack(0x000000015bda0000,0x000000015bea0000)]
+  0x00000000195ef800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19508, stack(0x000000015b5a0000,0x000000015b6a0000)]
+  0x00000000195e8000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19492, stack(0x000000015b1a0000,0x000000015b2a0000)]
+  0x00000000195e7800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19460, stack(0x000000015aaa0000,0x000000015aba0000)]
+  0x00000000195df000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18764, stack(0x000000015a3a0000,0x000000015a4a0000)]
+  0x00000000195eb000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19344, stack(0x0000000159ea0000,0x0000000159fa0000)]
+  0x00000000195e9800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18480, stack(0x00000001599a0000,0x0000000159aa0000)]
+  0x00000000195e9000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18716, stack(0x00000001590a0000,0x00000001591a0000)]
+  0x00000000195e3000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18860, stack(0x0000000158ca0000,0x0000000158da0000)]
+  0x00000000195e3800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18292, stack(0x00000001587a0000,0x00000001588a0000)]
+  0x00000000195e6000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19452, stack(0x00000001581a0000,0x00000001582a0000)]
+  0x00000000195e5000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19436, stack(0x0000000157aa0000,0x0000000157ba0000)]
+  0x00000000195e6800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19384, stack(0x00000001575a0000,0x00000001576a0000)]
+  0x00000000195db800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19336, stack(0x0000000156ea0000,0x0000000156fa0000)]
+  0x00000000195da800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=20412, stack(0x00000001569a0000,0x0000000156aa0000)]
+  0x00000000195e2000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19288, stack(0x00000001561a0000,0x00000001562a0000)]
+  0x00000000195e0000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19236, stack(0x0000000155da0000,0x0000000155ea0000)]
+  0x00000000195de800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19220, stack(0x00000001557a0000,0x00000001558a0000)]
+  0x00000000195dd000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19176, stack(0x00000001550a0000,0x00000001551a0000)]
+  0x00000000195e0800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19156, stack(0x0000000154ba0000,0x0000000154ca0000)]
+  0x00000000195dd800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19120, stack(0x00000001534d0000,0x00000001535d0000)]
+  0x00000000195dc000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19092, stack(0x0000000152fd0000,0x00000001530d0000)]
+  0x00000000195d3000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=19044, stack(0x00000001528d0000,0x00000001529d0000)]
+  0x00000000195d4000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18992, stack(0x00000001522d0000,0x00000001523d0000)]
+  0x00000000195e1800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18976, stack(0x0000000150e00000,0x0000000150f00000)]
+  0x00000000195da000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18940, stack(0x0000000150700000,0x0000000150800000)]
+  0x00000000195d6000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18900, stack(0x0000000150400000,0x0000000150500000)]
+  0x00000000195d7000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18872, stack(0x000000014fe00000,0x000000014ff00000)]
+  0x00000000195d4800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18868, stack(0x000000014fb00000,0x000000014fc00000)]
+  0x00000000195d9000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18836, stack(0x000000014f500000,0x000000014f600000)]
+  0x00000000195d5800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18776, stack(0x000000014f100000,0x000000014f200000)]
+  0x00000000195d8800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11952, stack(0x000000014ec00000,0x000000014ed00000)]
+  0x00000000195d2800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18732, stack(0x000000014e500000,0x000000014e600000)]
+  0x00000000195d7800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18692, stack(0x000000014e200000,0x000000014e300000)]
+  0x000000005e083800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18656, stack(0x000000014dd00000,0x000000014de00000)]
+  0x000000005de5e000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18604, stack(0x000000014d700000,0x000000014d800000)]
+  0x000000005e088800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18560, stack(0x000000014d300000,0x000000014d400000)]
+  0x000000005e082800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18544, stack(0x000000014cb00000,0x000000014cc00000)]
+  0x000000005e085000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18512, stack(0x000000014c500000,0x000000014c600000)]
+  0x000000005e081000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18496, stack(0x000000014c000000,0x000000014c100000)]
+  0x000000005e089800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18448, stack(0x000000014bd00000,0x000000014be00000)]
+  0x000000005e088000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18436, stack(0x000000014b700000,0x000000014b800000)]
+  0x000000005e084000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18344, stack(0x000000014b100000,0x000000014b200000)]
+  0x000000005e085800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18076, stack(0x000000014ad00000,0x000000014ae00000)]
+  0x000000005e087000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17984, stack(0x000000014a800000,0x000000014a900000)]
+  0x000000005e07a800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17792, stack(0x000000014a400000,0x000000014a500000)]
+  0x000000005e082000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17620, stack(0x0000000149e00000,0x0000000149f00000)]
+  0x000000005e07f800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18420, stack(0x0000000149a00000,0x0000000149b00000)]
+  0x000000005e07c800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18404, stack(0x0000000149400000,0x0000000149500000)]
+  0x000000005e080800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18308, stack(0x0000000149000000,0x0000000149100000)]
+  0x000000005e078000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18260, stack(0x0000000148b00000,0x0000000148c00000)]
+  0x000000005e07c000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18108, stack(0x0000000148500000,0x0000000148600000)]
+  0x000000005e079800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18100, stack(0x0000000147e00000,0x0000000147f00000)]
+  0x000000005e07b000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18072, stack(0x0000000147a00000,0x0000000147b00000)]
+  0x000000005e077800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18052, stack(0x0000000147600000,0x0000000147700000)]
+  0x000000005e07f000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18000, stack(0x0000000147100000,0x0000000147200000)]
+  0x000000005e07e000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17944, stack(0x0000000146b00000,0x0000000146c00000)]
+  0x000000005e079000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17916, stack(0x0000000146700000,0x0000000146800000)]
+  0x000000005e07d800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17904, stack(0x0000000146200000,0x0000000146300000)]
+  0x000000005e072000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17872, stack(0x0000000145c00000,0x0000000145d00000)]
+  0x000000005e076800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17856, stack(0x0000000145800000,0x0000000145900000)]
+  0x000000005e06e000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17816, stack(0x0000000145300000,0x0000000145400000)]
+  0x000000005e073800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17808, stack(0x0000000144e00000,0x0000000144f00000)]
+  0x000000005e075800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17760, stack(0x0000000144a00000,0x0000000144b00000)]
+  0x000000005e074000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17712, stack(0x0000000144400000,0x0000000144500000)]
+  0x000000005e072800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17684, stack(0x0000000144000000,0x0000000144100000)]
+  0x000000005e075000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17652, stack(0x0000000143a00000,0x0000000143b00000)]
+  0x000000005e06c000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17476, stack(0x0000000143600000,0x0000000143700000)]
+  0x000000005e06a800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17608, stack(0x0000000143000000,0x0000000143100000)]
+  0x000000005e06d800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17540, stack(0x0000000142c00000,0x0000000142d00000)]
+  0x000000005e071000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17516, stack(0x0000000142700000,0x0000000142800000)]
+  0x000000005e06b000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17480, stack(0x0000000142100000,0x0000000142200000)]
+  0x000000005e06f000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17460, stack(0x0000000141a00000,0x0000000141b00000)]
+  0x000000005e06f800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16716, stack(0x0000000141600000,0x0000000141700000)]
+  0x000000005e070800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18288, stack(0x0000000141200000,0x0000000141300000)]
+  0x000000005e06c800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=18284, stack(0x0000000140e00000,0x0000000140f00000)]
+  0x000000005de5f000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17128, stack(0x0000000140700000,0x0000000140800000)]
+  0x000000005dae6000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16860, stack(0x0000000140400000,0x0000000140500000)]
+  0x000000005de65800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16664, stack(0x000000007e0d0000,0x000000007e1d0000)]
+  0x000000005de64000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16528, stack(0x000000007ae00000,0x000000007af00000)]
+  0x000000005de63800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16408, stack(0x0000000078f00000,0x0000000079000000)]
+  0x000000005de62800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17332, stack(0x0000000075cd0000,0x0000000075dd0000)]
+  0x000000005de65000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17344, stack(0x00000000745d0000,0x00000000746d0000)]
+  0x000000005de5c000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17316, stack(0x00000000721d0000,0x00000000722d0000)]
+  0x000000005de5b000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17280, stack(0x000000006e700000,0x000000006e800000)]
+  0x000000005de61000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17240, stack(0x000000006c900000,0x000000006ca00000)]
+  0x000000005de62000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17216, stack(0x0000000069f00000,0x000000006a000000)]
+  0x000000005de5d800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17188, stack(0x0000000068200000,0x0000000068300000)]
+  0x000000005de5c800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17168, stack(0x0000000065800000,0x0000000065900000)]
+  0x000000005de59800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17108, stack(0x0000000063a00000,0x0000000063b00000)]
+  0x000000005de60800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17112, stack(0x0000000060be0000,0x0000000060ce0000)]
+  0x000000005de5f800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17072, stack(0x000000005d210000,0x000000005d310000)]
+  0x000000005de53800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17020, stack(0x000000005a5d0000,0x000000005a6d0000)]
+  0x000000005de5a800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=17008, stack(0x0000000057bd0000,0x0000000057cd0000)]
+  0x000000005de59000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16964, stack(0x0000000055dd0000,0x0000000055ed0000)]
+  0x000000005de50800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16916, stack(0x0000000051e00000,0x0000000051f00000)]
+  0x000000005de56000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16896, stack(0x0000000050600000,0x0000000050700000)]
+  0x000000005de52000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16848, stack(0x000000004dc00000,0x000000004dd00000)]
+  0x000000005de51800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16808, stack(0x000000004b000000,0x000000004b100000)]
+  0x000000005de58000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16812, stack(0x0000000048fd0000,0x00000000490d0000)]
+  0x000000005de57800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16764, stack(0x0000000045fd0000,0x00000000460d0000)]
+  0x000000005de56800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16728, stack(0x00000000447d0000,0x00000000448d0000)]
+  0x000000005de55000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16712, stack(0x00000000423d0000,0x00000000424d0000)]
+  0x000000005de54800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16668, stack(0x000000003f8d0000,0x000000003f9d0000)]
+  0x000000005de53000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16648, stack(0x000000003d4d0000,0x000000003d5d0000)]
+  0x000000005de49800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16612, stack(0x000000003add0000,0x000000003aed0000)]
+  0x000000005de47800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16596, stack(0x0000000037200000,0x0000000037300000)]
+  0x000000005de4a800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16544, stack(0x00000000347d0000,0x00000000348d0000)]
+  0x000000005de50000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16512, stack(0x0000000032ad0000,0x0000000032bd0000)]
+  0x000000005de49000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16476, stack(0x00000000306d0000,0x00000000307d0000)]
+  0x000000005de48000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16440, stack(0x000000002e3d0000,0x000000002e4d0000)]
+  0x000000005de4f000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16412, stack(0x000000002afd0000,0x000000002b0d0000)]
+  0x000000005de4d000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15956, stack(0x00000000289d0000,0x0000000028ad0000)]
+  0x000000005de4d800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16316, stack(0x00000000270d0000,0x00000000271d0000)]
+  0x000000005de4b800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15788, stack(0x0000000000710000,0x0000000000810000)]
+  0x000000005de4e800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15620, stack(0x0000000000210000,0x0000000000310000)]
+  0x000000005de46800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16376, stack(0x000000007fbd0000,0x000000007fcd0000)]
+  0x000000005de4c000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16380, stack(0x000000007f5d0000,0x000000007f6d0000)]
+  0x000000005dae4800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16340, stack(0x000000007eed0000,0x000000007efd0000)]
+  0x000000005d94f800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16288, stack(0x000000007e9d0000,0x000000007ead0000)]
+  0x000000005dae5000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16284, stack(0x000000007e2d0000,0x000000007e3d0000)]
+  0x000000005dae0800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16244, stack(0x000000007ce00000,0x000000007cf00000)]
+  0x000000005dae3000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16200, stack(0x000000007c700000,0x000000007c800000)]
+  0x000000005dae3800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16168, stack(0x000000007c200000,0x000000007c300000)]
+  0x000000005dae1800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16116, stack(0x000000007ba00000,0x000000007bb00000)]
+  0x000000005dae0000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16112, stack(0x000000007b600000,0x000000007b700000)]
+  0x000000005dadc000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16060, stack(0x000000007b000000,0x000000007b100000)]
+  0x000000005dae2000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16020, stack(0x000000007a900000,0x000000007aa00000)]
+  0x000000005dada000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16008, stack(0x000000007a400000,0x000000007a500000)]
+  0x000000005dadf000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16152, stack(0x0000000079d00000,0x0000000079e00000)]
+  0x000000005dadd800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15940, stack(0x0000000079800000,0x0000000079900000)]
+  0x000000005dada800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15908, stack(0x0000000079100000,0x0000000079200000)]
+  0x000000005dad7800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15884, stack(0x0000000078c00000,0x0000000078d00000)]
+  0x000000005dade800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15844, stack(0x0000000078600000,0x0000000078700000)]
+  0x000000005dadd000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15832, stack(0x0000000077f00000,0x0000000078000000)]
+  0x000000005dad4800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15752, stack(0x0000000077a00000,0x0000000077b00000)]
+  0x000000005dad9000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15744, stack(0x0000000077300000,0x0000000077400000)]
+  0x000000005dad8800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15704, stack(0x0000000076e00000,0x0000000076f00000)]
+  0x000000005dad0000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15644, stack(0x0000000076800000,0x0000000076900000)]
+  0x000000005dadb800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15612, stack(0x0000000075ed0000,0x0000000075fd0000)]
+  0x000000005dad1000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15592, stack(0x00000000759d0000,0x0000000075ad0000)]
+  0x000000005dad7000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15556, stack(0x00000000752d0000,0x00000000753d0000)]
+  0x000000005dac8800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15540, stack(0x0000000074dd0000,0x0000000074ed0000)]
+  0x000000005dad6000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15504, stack(0x00000000746d0000,0x00000000747d0000)]
+  0x000000005dad5800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15464, stack(0x0000000073fd0000,0x00000000740d0000)]
+  0x000000005dace800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15440, stack(0x00000000739d0000,0x0000000073ad0000)]
+  0x000000005dad2800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15432, stack(0x00000000734d0000,0x00000000735d0000)]
+  0x000000005dad3000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14440, stack(0x0000000072ed0000,0x0000000072fd0000)]
+  0x000000005dad4000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13540, stack(0x00000000728d0000,0x00000000729d0000)]
+  0x000000005dacf800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=1972, stack(0x00000000723d0000,0x00000000724d0000)]
+  0x000000005dad1800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13452, stack(0x0000000071dd0000,0x0000000071ed0000)]
+  0x000000005dacb800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11000, stack(0x00000000715d0000,0x00000000716d0000)]
+  0x000000005dac9800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14944, stack(0x00000000711d0000,0x00000000712d0000)]
+  0x000000005dac8000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=1236, stack(0x0000000070bd0000,0x0000000070cd0000)]
+  0x000000005dac7000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=5704, stack(0x00000000704d0000,0x00000000705d0000)]
+  0x000000005dace000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=9292, stack(0x000000006ffd0000,0x00000000700d0000)]
+  0x000000005daca000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=9748, stack(0x000000006e900000,0x000000006ea00000)]
+  0x000000005dacd000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=10464, stack(0x000000006e400000,0x000000006e500000)]
+  0x000000005dacc800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=9848, stack(0x000000006de00000,0x000000006df00000)]
+  0x000000005dacb000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=16100, stack(0x000000006d700000,0x000000006d800000)]
+  0x000000005d94b800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=1684, stack(0x000000006d200000,0x000000006d300000)]
+  0x000000002297e800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=10072, stack(0x000000006cb00000,0x000000006cc00000)]
+  0x000000005d94e800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7872, stack(0x000000006c600000,0x000000006c700000)]
+  0x000000005d94e000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4976, stack(0x000000006c000000,0x000000006c100000)]
+  0x000000005d94a000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14708, stack(0x000000006b900000,0x000000006ba00000)]
+  0x000000005d94c800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12908, stack(0x000000006b400000,0x000000006b500000)]
+  0x000000005d945000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11608, stack(0x000000006ad00000,0x000000006ae00000)]
+  0x000000005d946800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=10368, stack(0x000000006a800000,0x000000006a900000)]
+  0x000000005d942800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4904, stack(0x000000006a100000,0x000000006a200000)]
+  0x000000005d94b000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4968, stack(0x0000000069b00000,0x0000000069c00000)]
+  0x000000005d94d000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11592, stack(0x0000000069500000,0x0000000069600000)]
+  0x000000005d944000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15056, stack(0x0000000069000000,0x0000000069100000)]
+  0x000000005d942000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12564, stack(0x0000000068800000,0x0000000068900000)]
+  0x000000005d949800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=9600, stack(0x0000000068400000,0x0000000068500000)]
+  0x000000005d948000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2372, stack(0x0000000067d00000,0x0000000067e00000)]
+  0x000000005d948800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13788, stack(0x0000000067800000,0x0000000067900000)]
+  0x000000005d943800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11172, stack(0x0000000067100000,0x0000000067200000)]
+  0x000000005d945800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2228, stack(0x0000000066a00000,0x0000000066b00000)]
+  0x000000005d941000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14084, stack(0x0000000066500000,0x0000000066600000)]
+  0x000000005d940800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=948, stack(0x0000000066000000,0x0000000066100000)]
+  0x000000005d947000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11008, stack(0x0000000065a00000,0x0000000065b00000)]
+  0x000000002297f800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12936, stack(0x0000000065300000,0x0000000065400000)]
+  0x00000000227ae800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=484, stack(0x0000000064e00000,0x0000000064f00000)]
+  0x000000002297e000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6400, stack(0x0000000064700000,0x0000000064800000)]
+  0x0000000022984800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12756, stack(0x0000000064200000,0x0000000064300000)]
+  0x0000000022981800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=3216, stack(0x0000000063c00000,0x0000000063d00000)]
+  0x0000000022984000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15156, stack(0x0000000063500000,0x0000000063600000)]
+  0x0000000022983000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=9684, stack(0x0000000063000000,0x0000000063100000)]
+  0x0000000022980000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11360, stack(0x0000000062900000,0x0000000062a00000)]
+  0x0000000022981000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13780, stack(0x0000000062400000,0x0000000062500000)]
+  0x0000000022982800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12980, stack(0x0000000061ae0000,0x0000000061be0000)]
+  0x0000000022976800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=5084, stack(0x0000000060de0000,0x0000000060ee0000)]
+  0x0000000022978800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11204, stack(0x00000000606e0000,0x00000000607e0000)]
+  0x000000002297b800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12824, stack(0x00000000601e0000,0x00000000602e0000)]
+  0x000000002297d000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11560, stack(0x000000005fbe0000,0x000000005fce0000)]
+  0x000000002297c800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13868, stack(0x000000005f5e0000,0x000000005f6e0000)]
+  0x000000002297b000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=9628, stack(0x000000005ede0000,0x000000005eee0000)]
+  0x0000000022975800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2480, stack(0x000000005e8e0000,0x000000005e9e0000)]
+  0x0000000022978000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6100, stack(0x000000005d410000,0x000000005d510000)]
+  0x000000002297a000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2500, stack(0x000000005c2f0000,0x000000005c3f0000)]
+  0x0000000022977000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12152, stack(0x000000005bbf0000,0x000000005bcf0000)]
+  0x0000000022979800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2344, stack(0x000000005b3d0000,0x000000005b4d0000)]
+  0x000000002227a000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11508, stack(0x000000005acd0000,0x000000005add0000)]
+  0x00000000227b1800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14580, stack(0x000000005a7d0000,0x000000005a8d0000)]
+  0x00000000225ec000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13588, stack(0x000000005a0d0000,0x000000005a1d0000)]
+  0x00000000227ae000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11152, stack(0x0000000059bd0000,0x0000000059cd0000)]
+  0x00000000227ad000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4136, stack(0x00000000594d0000,0x00000000595d0000)]
+  0x00000000227af800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2976, stack(0x0000000058fd0000,0x00000000590d0000)]
+  0x00000000227b1000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2348, stack(0x00000000588d0000,0x00000000589d0000)]
+  0x00000000227b2800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=5848, stack(0x00000000583d0000,0x00000000584d0000)]
+  0x00000000227b0000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=1928, stack(0x0000000057dd0000,0x0000000057ed0000)]
+  0x00000000227a6000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=8276, stack(0x00000000576d0000,0x00000000577d0000)]
+  0x00000000227ac000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14564, stack(0x00000000571d0000,0x00000000572d0000)]
+  0x00000000227ab800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7320, stack(0x0000000056bd0000,0x0000000056cd0000)]
+  0x00000000227aa800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=10756, stack(0x00000000564d0000,0x00000000565d0000)]
+  0x00000000227a4000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=3156, stack(0x0000000055ed0000,0x0000000055fd0000)]
+  0x00000000227a3000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=1716, stack(0x00000000559d0000,0x0000000055ad0000)]
+  0x00000000227a4800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4852, stack(0x00000000551d0000,0x00000000552d0000)]
+  0x00000000227a8800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6076, stack(0x0000000054cd0000,0x0000000054dd0000)]
+  0x00000000227aa000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15284, stack(0x00000000547d0000,0x00000000548d0000)]
+  0x00000000227a5800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13696, stack(0x0000000053200000,0x0000000053300000)]
+  0x00000000227a7800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6984, stack(0x0000000052b00000,0x0000000052c00000)]
+  0x00000000227a9000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=5016, stack(0x0000000052600000,0x0000000052700000)]
+  0x00000000227a7000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14248, stack(0x0000000051f00000,0x0000000052000000)]
+  0x00000000225e9000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11064, stack(0x0000000051900000,0x0000000051a00000)]
+  0x000000002244e000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13608, stack(0x0000000051400000,0x0000000051500000)]
+  0x00000000225eb800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11948, stack(0x0000000050d00000,0x0000000050e00000)]
+  0x00000000225ea800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12036, stack(0x0000000050700000,0x0000000050800000)]
+  0x00000000225e8800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=1296, stack(0x0000000050100000,0x0000000050200000)]
+  0x00000000225ea000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6588, stack(0x000000004fc00000,0x000000004fd00000)]
+  0x00000000225ef000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6576, stack(0x000000004f500000,0x000000004f600000)]
+  0x00000000225e1800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11400, stack(0x000000004ef00000,0x000000004f000000)]
+  0x00000000225ed000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15012, stack(0x000000004ea00000,0x000000004eb00000)]
+  0x00000000225ee800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14968, stack(0x000000004e200000,0x000000004e300000)]
+  0x00000000225ed800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15080, stack(0x000000004de00000,0x000000004df00000)]
+  0x00000000225e0000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12436, stack(0x000000004d700000,0x000000004d800000)]
+  0x00000000225e7800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=9624, stack(0x000000004d200000,0x000000004d300000)]
+  0x00000000225e6000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=10364, stack(0x000000004cc00000,0x000000004cd00000)]
+  0x00000000225e7000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7268, stack(0x000000004bd00000,0x000000004be00000)]
+  0x00000000225e1000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=104, stack(0x000000004b800000,0x000000004b900000)]
+  0x00000000225e4800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14224, stack(0x000000004b200000,0x000000004b300000)]
+  0x00000000225e4000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14444, stack(0x000000004aa00000,0x000000004ab00000)]
+  0x00000000225e5800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2940, stack(0x000000004a2d0000,0x000000004a3d0000)]
+  0x00000000225e2800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11704, stack(0x0000000049cd0000,0x0000000049dd0000)]
+  0x00000000225e3000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11940, stack(0x00000000497d0000,0x00000000498d0000)]
+  0x000000002244f000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=904, stack(0x00000000490d0000,0x00000000491d0000)]
+  0x000000002244a800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=8612, stack(0x0000000048ad0000,0x0000000048bd0000)]
+  0x000000002244d800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11364, stack(0x00000000485d0000,0x00000000486d0000)]
+  0x0000000022446800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2412, stack(0x0000000047ed0000,0x0000000047fd0000)]
+  0x000000002244f800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12332, stack(0x00000000479d0000,0x0000000047ad0000)]
+  0x000000002244c000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12112, stack(0x00000000472d0000,0x00000000473d0000)]
+  0x000000002244c800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=10856, stack(0x0000000046dd0000,0x0000000046ed0000)]
+  0x000000002244b000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7596, stack(0x00000000466d0000,0x00000000467d0000)]
+  0x0000000022442000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7580, stack(0x00000000461d0000,0x00000000462d0000)]
+  0x0000000022442800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2696, stack(0x0000000045bd0000,0x0000000045cd0000)]
+  0x0000000022449800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12484, stack(0x00000000454d0000,0x00000000455d0000)]
+  0x0000000022441000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13580, stack(0x0000000044fd0000,0x00000000450d0000)]
+  0x0000000022444000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14576, stack(0x00000000449d0000,0x0000000044ad0000)]
+  0x0000000022449000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=5988, stack(0x00000000443d0000,0x00000000444d0000)]
+  0x0000000022446000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15300, stack(0x0000000043cd0000,0x0000000043dd0000)]
+  0x0000000022443800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=10436, stack(0x00000000437d0000,0x00000000438d0000)]
+  0x0000000022448000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13748, stack(0x00000000430d0000,0x00000000431d0000)]
+  0x0000000022447800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12728, stack(0x0000000042bd0000,0x0000000042cd0000)]
+  0x0000000022445000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6176, stack(0x00000000425d0000,0x00000000426d0000)]
+  0x0000000022440800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15120, stack(0x0000000041ed0000,0x0000000041fd0000)]
+  0x0000000021f61800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=10860, stack(0x00000000419d0000,0x0000000041ad0000)]
+  0x0000000022279800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=5100, stack(0x00000000413d0000,0x00000000414d0000)]
+  0x0000000022277000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6148, stack(0x0000000040cd0000,0x0000000040dd0000)]
+  0x0000000022278800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=976, stack(0x00000000407d0000,0x00000000408d0000)]
+  0x0000000022270000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11692, stack(0x00000000401d0000,0x00000000402d0000)]
+  0x0000000022278000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6968, stack(0x000000003fad0000,0x000000003fbd0000)]
+  0x0000000022276800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12760, stack(0x000000003f4d0000,0x000000003f5d0000)]
+  0x000000002226e800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7036, stack(0x000000003efd0000,0x000000003f0d0000)]
+  0x000000002226e000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=10488, stack(0x000000003e8d0000,0x000000003e9d0000)]
+  0x0000000022271000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7612, stack(0x000000003e2d0000,0x000000003e3d0000)]
+  0x0000000022275800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12560, stack(0x000000003ddd0000,0x000000003ded0000)]
+  0x0000000022273000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=9596, stack(0x000000003d6d0000,0x000000003d7d0000)]
+  0x000000002226f800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15168, stack(0x000000003d1d0000,0x000000003d2d0000)]
+  0x0000000022272800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13028, stack(0x000000003cbd0000,0x000000003ccd0000)]
+  0x0000000022271800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7388, stack(0x000000003c4d0000,0x000000003c5d0000)]
+  0x0000000022274800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7052, stack(0x000000003bbd0000,0x000000003bcd0000)]
+  0x0000000022274000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4148, stack(0x000000003b5d0000,0x000000003b6d0000)]
+  0x000000002226b800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14416, stack(0x000000003aed0000,0x000000003afd0000)]
+  0x000000002226b000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13412, stack(0x000000003a8d0000,0x000000003a9d0000)]
+  0x000000002226d000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=10108, stack(0x0000000039400000,0x0000000039500000)]
+  0x000000002226c800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13120, stack(0x0000000038d00000,0x0000000038e00000)]
+  0x0000000021f65000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7024, stack(0x0000000038700000,0x0000000038800000)]
+  0x0000000021fd6800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15068, stack(0x0000000038200000,0x0000000038300000)]
+  0x0000000021f60800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11944, stack(0x0000000037c00000,0x0000000037d00000)]
+  0x0000000021f63800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13816, stack(0x0000000037300000,0x0000000037400000)]
+  0x0000000021f67800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=8684, stack(0x0000000036e00000,0x0000000036f00000)]
+  0x0000000021f62000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13220, stack(0x0000000036800000,0x0000000036900000)]
+  0x0000000021f66800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=8104, stack(0x0000000036400000,0x0000000036500000)]
+  0x0000000021f66000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=1944, stack(0x0000000035ad0000,0x0000000035bd0000)]
+  0x0000000021f64800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2800, stack(0x00000000354d0000,0x00000000355d0000)]
+  0x0000000021f58800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7712, stack(0x0000000034ad0000,0x0000000034bd0000)]
+  0x0000000021f63000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=10556, stack(0x00000000344d0000,0x00000000345d0000)]
+  0x0000000021f5a000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6636, stack(0x0000000033fd0000,0x00000000340d0000)]
+  0x0000000021f5f000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4788, stack(0x00000000339d0000,0x0000000033ad0000)]
+  0x0000000021f5e800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4864, stack(0x00000000333d0000,0x00000000334d0000)]
+  0x0000000021f60000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13812, stack(0x0000000032bd0000,0x0000000032cd0000)]
+  0x0000000021f5b800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=10260, stack(0x00000000327d0000,0x00000000328d0000)]
+  0x0000000021f5d800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14208, stack(0x00000000320d0000,0x00000000321d0000)]
+  0x0000000021f5d000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11968, stack(0x0000000031bd0000,0x0000000031cd0000)]
+  0x0000000021f59000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=8784, stack(0x00000000314d0000,0x00000000315d0000)]
+  0x0000000021f5a800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=5488, stack(0x0000000030fd0000,0x00000000310d0000)]
+  0x0000000021f5c000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4500, stack(0x00000000308d0000,0x00000000309d0000)]
+  0x0000000021da4800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4772, stack(0x00000000303d0000,0x00000000304d0000)]
+  0x0000000021fd3000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11036, stack(0x000000002fdd0000,0x000000002fed0000)]
+  0x0000000021fd7800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14924, stack(0x000000002f6d0000,0x000000002f7d0000)]
+  0x0000000021fd4800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6252, stack(0x000000002f1d0000,0x000000002f2d0000)]
+  0x0000000021fd3800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6404, stack(0x000000002ead0000,0x000000002ebd0000)]
+  0x0000000021fca000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13856, stack(0x000000002e5d0000,0x000000002e6d0000)]
+  0x0000000021fd5000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15088, stack(0x000000002ded0000,0x000000002dfd0000)]
+  0x0000000021fd2000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4124, stack(0x000000002d9d0000,0x000000002dad0000)]
+  0x0000000021fd6000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4980, stack(0x000000002d3d0000,0x000000002d4d0000)]
+  0x0000000021fca800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=10392, stack(0x000000002ccd0000,0x000000002cdd0000)]
+  0x0000000021fd1800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=5008, stack(0x000000002bfd0000,0x000000002c0d0000)]
+  0x0000000021fcf000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6540, stack(0x000000002b8d0000,0x000000002b9d0000)]
+  0x0000000021fcb800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14500, stack(0x000000002b1d0000,0x000000002b2d0000)]
+  0x0000000021fd0800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2416, stack(0x000000002abd0000,0x000000002acd0000)]
+  0x0000000021fcd800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6488, stack(0x000000002a4d0000,0x000000002a5d0000)]
+  0x0000000021fce800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13784, stack(0x0000000029fd0000,0x000000002a0d0000)]
+  0x0000000021fc9000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=4796, stack(0x00000000297d0000,0x00000000298d0000)]
+  0x0000000021fcd000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=14392, stack(0x00000000290d0000,0x00000000291d0000)]
+  0x0000000021fc8800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11356, stack(0x0000000028bd0000,0x0000000028cd0000)]
+  0x0000000021fd0000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=6444, stack(0x00000000285d0000,0x00000000286d0000)]
+  0x0000000021fcc000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15044, stack(0x0000000027dd0000,0x0000000027ed0000)]
+  0x0000000021da0800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=7332, stack(0x00000000278d0000,0x00000000279d0000)]
+  0x0000000021da1800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=11892, stack(0x00000000272d0000,0x00000000273d0000)]
+  0x0000000021da6000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=2772, stack(0x0000000026dd0000,0x0000000026ed0000)]
+  0x0000000021da6800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=9676, stack(0x00000000267d0000,0x00000000268d0000)]
+  0x0000000021da2000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=3324, stack(0x0000000025ed0000,0x0000000025fd0000)]
+  0x0000000021da5000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=5904, stack(0x00000000256d0000,0x00000000257d0000)]
+  0x0000000021da3000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13948, stack(0x00000000251d0000,0x00000000252d0000)]
+  0x0000000021da3800 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=13648, stack(0x0000000024ad0000,0x0000000024bd0000)]
+  0x0000000021da0000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=15208, stack(0x00000000245d0000,0x00000000246d0000)]
+  0x0000000021e54000 JavaThread "JFXMedia Player EventQueueThread" daemon [_thread_blocked, id=12716, stack(0x0000000023dd0000,0x0000000023ed0000)]
+  0x000000001a094800 JavaThread "Prism Font Disposer" daemon [_thread_blocked, id=20768, stack(0x000000001fce0000,0x000000001fde0000)]
+  0x0000000019d32000 JavaThread "Thread-3" daemon [_thread_in_native, id=21432, stack(0x000000001f010000,0x000000001f110000)]
+  0x0000000019d2d800 JavaThread "JavaFX-Launcher" [_thread_blocked, id=21456, stack(0x000000001f110000,0x000000001f210000)]
+  0x0000000019708000 JavaThread "JavaFX Application Thread" [_thread_in_native, id=21436, stack(0x000000001a630000,0x000000001a730000)]
+  0x0000000019705800 JavaThread "Thread-1" daemon [_thread_blocked, id=21428, stack(0x000000001a530000,0x000000001a630000)]
+  0x00000000196d3000 JavaThread "QuantumRenderer-0" daemon [_thread_blocked, id=21412, stack(0x0000000019af0000,0x0000000019bf0000)]
+  0x0000000017a1d800 JavaThread "Service Thread" daemon [_thread_blocked, id=21208, stack(0x0000000019710000,0x0000000019810000)]
+  0x00000000179c8000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=21388, stack(0x0000000019210000,0x0000000019310000)]
+  0x00000000179c4000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=21404, stack(0x0000000019110000,0x0000000019210000)]
+  0x00000000179c0800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=21400, stack(0x0000000019010000,0x0000000019110000)]
+  0x00000000179bd000 JavaThread "Attach Listener" daemon [_thread_blocked, id=21500, stack(0x0000000018f10000,0x0000000019010000)]
+  0x00000000179bb800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=21416, stack(0x0000000018e10000,0x0000000018f10000)]
+  0x0000000002e2b800 JavaThread "Finalizer" daemon [_thread_blocked, id=21392, stack(0x0000000018c20000,0x0000000018d20000)]
+  0x0000000002e22800 JavaThread "Reference Handler" daemon [_thread_blocked, id=21384, stack(0x0000000018b20000,0x0000000018c20000)]
+  0x0000000002d2d800 JavaThread "main" [_thread_blocked, id=21232, stack(0x0000000002b80000,0x0000000002c80000)]
+
+Other Threads:
+  0x0000000017987800 VMThread [stack: 0x0000000018a20000,0x0000000018b20000] [id=21356]
+  0x0000000017a1e000 WatcherThread [stack: 0x0000000019810000,0x0000000019910000] [id=21424]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 370688K, used 67251K [0x00000000d5b00000, 0x00000000f4b00000, 0x0000000100000000)
+  eden space 305664K, 0% used [0x00000000d5b00000,0x00000000d5d6fed8,0x00000000e8580000)
+  from space 65024K, 99% used [0x00000000f0b80000,0x00000000f4abd0b0,0x00000000f4b00000)
+  to   space 89088K, 32% used [0x00000000e9d00000,0x00000000eb92f200,0x00000000ef400000)
+ ParOldGen       total 176128K, used 175885K [0x0000000081000000, 0x000000008bc00000, 0x00000000d5b00000)
+  object space 176128K, 99% used [0x0000000081000000,0x000000008bbc3690,0x000000008bc00000)
+ Metaspace       used 20146K, capacity 21292K, committed 21552K, reserved 1067008K
+  class space    used 2859K, capacity 3097K, committed 3200K, reserved 1048576K
+
+Card table byte_map: [0x00000000121f0000,0x00000000125f0000] byte_map_base: 0x0000000011de8000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005cf82d00
+ Begin Bits: [0x0000000012ca0000, 0x0000000014c60000)
+ End Bits:   [0x0000000014c60000, 0x0000000016c20000)
+
+Polling page: 0x0000000002a00000
+
+CodeCache: size=245760Kb used=8701Kb max_used=8914Kb free=237058Kb
+ bounds [0x0000000002e30000, 0x0000000003700000, 0x0000000011e30000]
+ total_blobs=3339 nmethods=2662 adapters=589
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 9.423 Thread 0x00000000179c0800 2918       4       java.util.GregorianCalendar::getWeekNumber (89 bytes)
+Event: 9.424 Thread 0x00000000179c0800 nmethod 2918 0x000000000323cc90 code [0x000000000323cdc0, 0x000000000323cf18]
+Event: 9.481 Thread 0x00000000179c4000 2919       4       sun.util.calendar.BaseCalendar::getFixedDate (324 bytes)
+Event: 9.484 Thread 0x00000000179c4000 nmethod 2919 0x0000000003348090 code [0x00000000033481e0, 0x00000000033484f8]
+Event: 9.527 Thread 0x00000000179c0800 2920       4       java.text.SimpleDateFormat::encode (95 bytes)
+Event: 9.532 Thread 0x00000000179c0800 nmethod 2920 0x00000000034dba10 code [0x00000000034dbb60, 0x00000000034dbf58]
+Event: 9.532 Thread 0x00000000179c0800 2921       4       sun.nio.cs.ISO_8859_1$Decoder::<init> (6 bytes)
+Event: 9.533 Thread 0x00000000179c0800 nmethod 2921 0x0000000003250f10 code [0x0000000003251060, 0x0000000003251218]
+Event: 9.584 Thread 0x00000000179c4000 2922       4       java.lang.Class::searchMethods (90 bytes)
+Event: 9.595 Thread 0x00000000179c4000 nmethod 2922 0x00000000034dacd0 code [0x00000000034dae60, 0x00000000034db4f8]
+
+GC Heap History (10 events):
+Event: 5.868 GC heap before
+{Heap before GC invocations=9 (full 0):
+ PSYoungGen      total 266752K, used 266680K [0x00000000d5b00000, 0x00000000ea300000, 0x0000000100000000)
+  eden space 236032K, 99% used [0x00000000d5b00000,0x00000000e4174608,0x00000000e4180000)
+  from space 30720K, 99% used [0x00000000e6c00000,0x00000000e89f9b78,0x00000000e8a00000)
+  to   space 43520K, 0% used [0x00000000e4180000,0x00000000e4180000,0x00000000e6c00000)
+ ParOldGen       total 87552K, used 60819K [0x0000000081000000, 0x0000000086580000, 0x00000000d5b00000)
+  object space 87552K, 69% used [0x0000000081000000,0x0000000084b64d00,0x0000000086580000)
+ Metaspace       used 20036K, capacity 21164K, committed 21296K, reserved 1067008K
+  class space    used 2859K, capacity 3097K, committed 3200K, reserved 1048576K
+Event: 5.898 GC heap after
+Heap after GC invocations=9 (full 0):
+ PSYoungGen      total 279552K, used 43499K [0x00000000d5b00000, 0x00000000f4b00000, 0x0000000100000000)
+  eden space 236032K, 0% used [0x00000000d5b00000,0x00000000d5b00000,0x00000000e4180000)
+  from space 43520K, 99% used [0x00000000e4180000,0x00000000e6bfaee8,0x00000000e6c00000)
+  to   space 65024K, 0% used [0x00000000f0b80000,0x00000000f0b80000,0x00000000f4b00000)
+ ParOldGen       total 94208K, used 94103K [0x0000000081000000, 0x0000000086c00000, 0x00000000d5b00000)
+  object space 94208K, 99% used [0x0000000081000000,0x0000000086be5cb0,0x0000000086c00000)
+ Metaspace       used 20036K, capacity 21164K, committed 21296K, reserved 1067008K
+  class space    used 2859K, capacity 3097K, committed 3200K, reserved 1048576K
+}
+Event: 5.898 GC heap before
+{Heap before GC invocations=10 (full 1):
+ PSYoungGen      total 279552K, used 43499K [0x00000000d5b00000, 0x00000000f4b00000, 0x0000000100000000)
+  eden space 236032K, 0% used [0x00000000d5b00000,0x00000000d5b00000,0x00000000e4180000)
+  from space 43520K, 99% used [0x00000000e4180000,0x00000000e6bfaee8,0x00000000e6c00000)
+  to   space 65024K, 0% used [0x00000000f0b80000,0x00000000f0b80000,0x00000000f4b00000)
+ ParOldGen       total 94208K, used 94103K [0x0000000081000000, 0x0000000086c00000, 0x00000000d5b00000)
+  object space 94208K, 99% used [0x0000000081000000,0x0000000086be5cb0,0x0000000086c00000)
+ Metaspace       used 20036K, capacity 21164K, committed 21296K, reserved 1067008K
+  class space    used 2859K, capacity 3097K, committed 3200K, reserved 1048576K
+Event: 6.047 GC heap after
+Heap after GC invocations=10 (full 1):
+ PSYoungGen      total 279552K, used 42926K [0x00000000d5b00000, 0x00000000f4b00000, 0x0000000100000000)
+  eden space 236032K, 0% used [0x00000000d5b00000,0x00000000d5b00000,0x00000000e4180000)
+  from space 43520K, 98% used [0x00000000e4180000,0x00000000e6b6bb60,0x00000000e6c00000)
+  to   space 65024K, 0% used [0x00000000f0b80000,0x00000000f0b80000,0x00000000f4b00000)
+ ParOldGen       total 173056K, used 94142K [0x0000000081000000, 0x000000008b900000, 0x00000000d5b00000)
+  object space 173056K, 54% used [0x0000000081000000,0x0000000086befb08,0x000000008b900000)
+ Metaspace       used 20036K, capacity 21164K, committed 21296K, reserved 1067008K
+  class space    used 2859K, capacity 3097K, committed 3200K, reserved 1048576K
+}
+Event: 7.524 GC heap before
+{Heap before GC invocations=11 (full 1):
+ PSYoungGen      total 279552K, used 278958K [0x00000000d5b00000, 0x00000000f4b00000, 0x0000000100000000)
+  eden space 236032K, 100% used [0x00000000d5b00000,0x00000000e4180000,0x00000000e4180000)
+  from space 43520K, 98% used [0x00000000e4180000,0x00000000e6b6bb60,0x00000000e6c00000)
+  to   space 65024K, 0% used [0x00000000f0b80000,0x00000000f0b80000,0x00000000f4b00000)
+ ParOldGen       total 173056K, used 94142K [0x0000000081000000, 0x000000008b900000, 0x00000000d5b00000)
+  object space 173056K, 54% used [0x0000000081000000,0x0000000086befb08,0x000000008b900000)
+ Metaspace       used 20054K, capacity 21228K, committed 21552K, reserved 1067008K
+  class space    used 2859K, capacity 3097K, committed 3200K, reserved 1048576K
+Event: 7.561 GC heap after
+Heap after GC invocations=11 (full 1):
+ PSYoungGen      total 370688K, used 65023K [0x00000000d5b00000, 0x00000000f4b00000, 0x0000000100000000)
+  eden space 305664K, 0% used [0x00000000d5b00000,0x00000000d5b00000,0x00000000e8580000)
+  from space 65024K, 99% used [0x00000000f0b80000,0x00000000f4affdd0,0x00000000f4b00000)
+  to   space 89088K, 0% used [0x00000000e9d00000,0x00000000e9d00000,0x00000000ef400000)
+ ParOldGen       total 173056K, used 129181K [0x0000000081000000, 0x000000008b900000, 0x00000000d5b00000)
+  object space 173056K, 74% used [0x0000000081000000,0x0000000088e27778,0x000000008b900000)
+ Metaspace       used 20054K, capacity 21228K, committed 21552K, reserved 1067008K
+  class space    used 2859K, capacity 3097K, committed 3200K, reserved 1048576K
+}
+Event: 9.656 GC heap before
+{Heap before GC invocations=12 (full 1):
+ PSYoungGen      total 370688K, used 370687K [0x00000000d5b00000, 0x00000000f4b00000, 0x0000000100000000)
+  eden space 305664K, 100% used [0x00000000d5b00000,0x00000000e8580000,0x00000000e8580000)
+  from space 65024K, 99% used [0x00000000f0b80000,0x00000000f4affdd0,0x00000000f4b00000)
+  to   space 89088K, 0% used [0x00000000e9d00000,0x00000000e9d00000,0x00000000ef400000)
+ ParOldGen       total 173056K, used 129181K [0x0000000081000000, 0x000000008b900000, 0x00000000d5b00000)
+  object space 173056K, 74% used [0x0000000081000000,0x0000000088e27778,0x000000008b900000)
+ Metaspace       used 20146K, capacity 21292K, committed 21552K, reserved 1067008K
+  class space    used 2859K, capacity 3097K, committed 3200K, reserved 1048576K
+Event: 9.714 GC heap after
+Heap after GC invocations=12 (full 1):
+ PSYoungGen      total 370688K, used 370687K [0x00000000d5b00000, 0x00000000f4b00000, 0x0000000100000000)
+  eden space 305664K, 100% used [0x00000000d5b00000,0x00000000e8580000,0x00000000e8580000)
+  from space 65024K, 99% used [0x00000000f0b80000,0x00000000f4affdd0,0x00000000f4b00000)
+  to   space 89088K, 85% used [0x00000000e9d00000,0x00000000ee6f8880,0x00000000ef400000)
+ ParOldGen       total 176128K, used 175969K [0x0000000081000000, 0x000000008bc00000, 0x00000000d5b00000)
+  object space 176128K, 99% used [0x0000000081000000,0x000000008bbd8668,0x000000008bc00000)
+ Metaspace       used 20146K, capacity 21292K, committed 21552K, reserved 1067008K
+  class space    used 2859K, capacity 3097K, committed 3200K, reserved 1048576K
+}
+Event: 9.714 GC heap before
+{Heap before GC invocations=13 (full 2):
+ PSYoungGen      total 370688K, used 370687K [0x00000000d5b00000, 0x00000000f4b00000, 0x0000000100000000)
+  eden space 305664K, 100% used [0x00000000d5b00000,0x00000000e8580000,0x00000000e8580000)
+  from space 65024K, 99% used [0x00000000f0b80000,0x00000000f4affdd0,0x00000000f4b00000)
+  to   space 89088K, 85% used [0x00000000e9d00000,0x00000000ee6f8880,0x00000000ef400000)
+ ParOldGen       total 176128K, used 175969K [0x0000000081000000, 0x000000008bc00000, 0x00000000d5b00000)
+  object space 176128K, 99% used [0x0000000081000000,0x000000008bbd8668,0x000000008bc00000)
+ Metaspace       used 20146K, capacity 21292K, committed 21552K, reserved 1067008K
+  class space    used 2859K, capacity 3097K, committed 3200K, reserved 1048576K
+Event: 9.854 GC heap after
+Heap after GC invocations=13 (full 2):
+ PSYoungGen      total 370688K, used 64756K [0x00000000d5b00000, 0x00000000f4b00000, 0x0000000100000000)
+  eden space 305664K, 0% used [0x00000000d5b00000,0x00000000d5b00000,0x00000000e8580000)
+  from space 65024K, 99% used [0x00000000f0b80000,0x00000000f4abd0b0,0x00000000f4b00000)
+  to   space 89088K, 32% used [0x00000000e9d00000,0x00000000eb92f200,0x00000000ef400000)
+ ParOldGen       total 176128K, used 175885K [0x0000000081000000, 0x000000008bc00000, 0x00000000d5b00000)
+  object space 176128K, 99% used [0x0000000081000000,0x000000008bbc3690,0x000000008bc00000)
+ Metaspace       used 20146K, capacity 21292K, committed 21552K, reserved 1067008K
+  class space    used 2859K, capacity 3097K, committed 3200K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 1.399 Thread 0x0000000019708000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000032fa0b0 method=com.sun.javafx.css.SimpleSelector.stateMatches(Ljavafx/css/Styleable;Ljava/util/Set;)Z @ 1
+Event: 1.570 Thread 0x00000000196d3000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000031675d8 method=java.io.BufferedInputStream.read1([BII)I @ 22
+Event: 1.570 Thread 0x00000000196d3000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000000000314e0b0 method=java.io.BufferedInputStream.read1([BII)I @ 60
+Event: 1.626 Thread 0x00000000196d3000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000000000339cb38 method=java.util.WeakHashMap.eq(Ljava/lang/Object;Ljava/lang/Object;)Z @ 2
+Event: 2.224 Thread 0x0000000019708000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000000000325dfa8 method=jdk.internal.org.objectweb.asm.Type.getArgumentsAndReturnSizes(Ljava/lang/String;)I @ 47
+Event: 2.475 Thread 0x0000000019708000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000003093010 method=java.lang.AbstractStringBuilder.append(Ljava/lang/String;)Ljava/lang/AbstractStringBuilder; @ 1
+Event: 2.475 Thread 0x0000000019708000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000003059a88 method=java.lang.AbstractStringBuilder.append(Ljava/lang/String;)Ljava/lang/AbstractStringBuilder; @ 1
+Event: 2.512 Thread 0x0000000021e54000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000034db6a4 method=com.sun.media.jfxmediaimpl.MetadataParserImpl.getNextByte()B @ 4
+Event: 2.513 Thread 0x0000000021e54000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000032c0afc method=java.lang.String.trim()Ljava/lang/String; @ 44
+Event: 2.547 Thread 0x0000000021da3800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000034dbd48 method=com.sun.media.jfxmediaimpl.MetadataParserImpl.getBytes(I)[B @ 26
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.544 Thread 0x0000000019708000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d6d7ef20) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u181\11358\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 0.557 Thread 0x0000000019708000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d6dd5528) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u181\11358\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 0.617 Thread 0x0000000019708000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d6fb1708) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u181\11358\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 0.617 Thread 0x0000000019708000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d6fb2708) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u181\11358\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 0.618 Thread 0x0000000019708000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d6fb3f78) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u181\11358\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 0.850 Thread 0x0000000019708000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000d74ed6d8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u181\11358\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 0.931 Thread 0x0000000019708000 Implicit null exception at 0x0000000003126df5 to 0x0000000003127011
+Event: 1.399 Thread 0x0000000019708000 Implicit null exception at 0x00000000032f9997 to 0x00000000032fa085
+Event: 2.475 Thread 0x0000000019708000 Implicit null exception at 0x0000000003092c56 to 0x0000000003092ff9
+Event: 2.475 Thread 0x0000000019708000 Implicit null exception at 0x00000000030596d6 to 0x0000000003059a71
+
+Events (10 events):
+Event: 9.857 Thread 0x00000001bacf7800 Thread added: 0x00000001bacf7800
+Event: 9.857 Thread 0x00000001bacf7800 Thread exited: 0x00000001bacf7800
+Event: 9.857 Thread 0x00000001bacfd800 Thread added: 0x00000001bacfd800
+Event: 9.857 Thread 0x00000001bacfd800 Thread exited: 0x00000001bacfd800
+Event: 9.857 Thread 0x00000001bacfd000 Thread added: 0x00000001bacfd000
+Event: 9.857 Thread 0x00000001bacfd000 Thread exited: 0x00000001bacfd000
+Event: 9.857 Thread 0x00000001bacfa800 Thread added: 0x00000001bacfa800
+Event: 9.857 Thread 0x00000001bacfa800 Thread exited: 0x00000001bacfa800
+Event: 9.857 Thread 0x00000001bacfa800 Thread added: 0x00000001bacfa800
+Event: 9.857 Thread 0x00000001bacfa800 Thread exited: 0x00000001bacfa800
+
+
+Dynamic libraries:
+0x00007ff77e4d0000 - 0x00007ff77e507000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\java.exe
+0x00007ffcf4840000 - 0x00007ffcf4a21000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffcf4740000 - 0x00007ffcf47f2000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffcf1880000 - 0x00007ffcf1af3000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffcf2690000 - 0x00007ffcf2731000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffcf1fb0000 - 0x00007ffcf204e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffcf2050000 - 0x00007ffcf20ab000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffcf2f70000 - 0x00007ffcf3094000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffcf3100000 - 0x00007ffcf3290000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffcf1b50000 - 0x00007ffcf1b70000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffcf2f30000 - 0x00007ffcf2f58000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffcf1630000 - 0x00007ffcf17c2000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffcf1590000 - 0x00007ffcf162f000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffcf1b70000 - 0x00007ffcf1c6a000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffcdebd0000 - 0x00007ffcdee39000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.228_none_fb4599993062b194\COMCTL32.dll
+0x00007ffcf20e0000 - 0x00007ffcf2403000 	C:\WINDOWS\System32\combase.dll
+0x00007ffcf0e00000 - 0x00007ffcf0e7a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffcf20b0000 - 0x00007ffcf20dd000 	C:\WINDOWS\System32\IMM32.DLL
+0x000000005c680000 - 0x000000005c752000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\msvcr100.dll
+0x000000005c760000 - 0x000000005d002000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\server\jvm.dll
+0x00007ffcf2f60000 - 0x00007ffcf2f68000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffce36e0000 - 0x00007ffce36e9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffce25d0000 - 0x00007ffce25da000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffced380000 - 0x00007ffced3a3000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffcf46d0000 - 0x00007ffcf473c000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffced320000 - 0x00007ffced34a000 	C:\WINDOWS\SYSTEM32\winmmbase.dll
+0x00007ffcf1b00000 - 0x00007ffcf1b49000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x000000005c630000 - 0x000000005c63f000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\verify.dll
+0x000000005c600000 - 0x000000005c629000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\java.dll
+0x000000005c5e0000 - 0x000000005c5f6000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\zip.dll
+0x00007ffcf3290000 - 0x00007ffcf46d0000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ffcf1f00000 - 0x00007ffcf1fa9000 	C:\WINDOWS\System32\shcore.dll
+0x00007ffcf0e80000 - 0x00007ffcf158d000 	C:\WINDOWS\System32\windows.storage.dll
+0x00007ffcf2490000 - 0x00007ffcf24e1000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ffcf0bf0000 - 0x00007ffcf0c01000 	C:\WINDOWS\System32\kernel.appcore.dll
+0x00007ffcf0b50000 - 0x00007ffcf0b6f000 	C:\WINDOWS\System32\profapi.dll
+0x00007ffcf0b90000 - 0x00007ffcf0bdc000 	C:\WINDOWS\System32\powrprof.dll
+0x00007ffcf0be0000 - 0x00007ffcf0bea000 	C:\WINDOWS\System32\FLTLIB.DLL
+0x0000000002c80000 - 0x0000000002c83000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-console-l1-1-0.dll
+0x0000000002c90000 - 0x0000000002c93000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-datetime-l1-1-0.dll
+0x0000000002ca0000 - 0x0000000002ca3000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-debug-l1-1-0.dll
+0x0000000002cb0000 - 0x0000000002cb3000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-errorhandling-l1-1-0.dll
+0x0000000002cc0000 - 0x0000000002cc4000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-file-l1-1-0.dll
+0x0000000002cd0000 - 0x0000000002cd3000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-file-l1-2-0.dll
+0x0000000002ce0000 - 0x0000000002ce3000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-file-l2-1-0.dll
+0x0000000002cf0000 - 0x0000000002cf3000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-handle-l1-1-0.dll
+0x0000000002d00000 - 0x0000000002d03000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-heap-l1-1-0.dll
+0x0000000002d10000 - 0x0000000002d13000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-interlocked-l1-1-0.dll
+0x0000000019910000 - 0x0000000019913000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-libraryloader-l1-1-0.dll
+0x0000000019920000 - 0x0000000019923000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-localization-l1-2-0.dll
+0x0000000019930000 - 0x0000000019933000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-memory-l1-1-0.dll
+0x0000000019940000 - 0x0000000019943000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-namedpipe-l1-1-0.dll
+0x0000000019950000 - 0x0000000019953000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-processenvironment-l1-1-0.dll
+0x0000000019960000 - 0x0000000019963000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-processthreads-l1-1-0.dll
+0x0000000019970000 - 0x0000000019973000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-processthreads-l1-1-1.dll
+0x0000000019980000 - 0x0000000019983000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-profile-l1-1-0.dll
+0x0000000019990000 - 0x0000000019993000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-rtlsupport-l1-1-0.dll
+0x00000000199a0000 - 0x00000000199a3000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-string-l1-1-0.dll
+0x00000000199b0000 - 0x00000000199b3000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-synch-l1-1-0.dll
+0x00000000199c0000 - 0x00000000199c3000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-synch-l1-2-0.dll
+0x00000000199d0000 - 0x00000000199d3000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-sysinfo-l1-1-0.dll
+0x00000000199e0000 - 0x00000000199e3000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-timezone-l1-1-0.dll
+0x00000000199f0000 - 0x00000000199f3000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-core-util-l1-1-0.dll
+0x0000000019a00000 - 0x0000000019a03000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-crt-conio-l1-1-0.dll
+0x0000000019a10000 - 0x0000000019a14000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-crt-convert-l1-1-0.dll
+0x0000000019a20000 - 0x0000000019a23000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-crt-environment-l1-1-0.dll
+0x0000000019a30000 - 0x0000000019a33000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-crt-filesystem-l1-1-0.dll
+0x0000000019a40000 - 0x0000000019a43000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-crt-heap-l1-1-0.dll
+0x0000000019a50000 - 0x0000000019a53000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-crt-locale-l1-1-0.dll
+0x0000000019a60000 - 0x0000000019a65000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-crt-math-l1-1-0.dll
+0x0000000019a70000 - 0x0000000019a75000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-crt-multibyte-l1-1-0.dll
+0x0000000019a80000 - 0x0000000019a90000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-crt-private-l1-1-0.dll
+0x0000000019a90000 - 0x0000000019a93000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-crt-process-l1-1-0.dll
+0x0000000019aa0000 - 0x0000000019aa4000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-crt-runtime-l1-1-0.dll
+0x0000000019ab0000 - 0x0000000019ab4000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-crt-stdio-l1-1-0.dll
+0x0000000019ac0000 - 0x0000000019ac4000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-crt-string-l1-1-0.dll
+0x0000000019ad0000 - 0x0000000019ad3000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-crt-time-l1-1-0.dll
+0x0000000019ae0000 - 0x0000000019ae3000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\api-ms-win-crt-utility-l1-1-0.dll
+0x00007ffcdbe70000 - 0x00007ffcdbf66000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\ucrtbase.dll
+0x00007ffcea8d0000 - 0x00007ffcea8e6000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\vcruntime140.dll
+0x00007ffcdbdd0000 - 0x00007ffcdbe6c000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\msvcp140.dll
+0x00007ffcdd8e0000 - 0x00007ffcdd931000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\concrt140.dll
+0x000000005b7c0000 - 0x000000005b7e3000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\prism_d3d.dll
+0x00007ffcc4e50000 - 0x00007ffcc4fe7000 	C:\WINDOWS\system32\d3d9.dll
+0x00007ffceedb0000 - 0x00007ffceedd9000 	C:\WINDOWS\SYSTEM32\dwmapi.dll
+0x00007ffceece0000 - 0x00007ffceed78000 	C:\WINDOWS\system32\uxtheme.dll
+0x00007ffcb4220000 - 0x00007ffcb6503000 	C:\WINDOWS\SYSTEM32\igdumdim64.dll
+0x00007ffcf2ae0000 - 0x00007ffcf2f2b000 	C:\WINDOWS\System32\SETUPAPI.dll
+0x00007ffcf1e30000 - 0x00007ffcf1ef2000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffcf1cd0000 - 0x00007ffcf1e21000 	C:\WINDOWS\System32\ole32.dll
+0x000000005b770000 - 0x000000005b7b9000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\glass.dll
+0x00007ffcf24f0000 - 0x00007ffcf25dd000 	C:\WINDOWS\System32\COMDLG32.dll
+0x00007ffcf28e0000 - 0x00007ffcf2a55000 	C:\WINDOWS\System32\MSCTF.dll
+0x00007ffce4050000 - 0x00007ffce4a42000 	C:\WINDOWS\SYSTEM32\igdusc64.dll
+0x000000005b750000 - 0x000000005b764000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\javafx_font.dll
+0x00007ffcdfd60000 - 0x00007ffce007c000 	C:\WINDOWS\SYSTEM32\dwrite.dll
+0x00007ffcf25e0000 - 0x00007ffcf2680000 	C:\WINDOWS\System32\clbcatq.dll
+0x00007ffceae50000 - 0x00007ffceaffe000 	C:\WINDOWS\SYSTEM32\WindowsCodecs.dll
+0x00007ffcd4fa0000 - 0x00007ffcd4ff8000 	C:\WINDOWS\system32\dataexchange.dll
+0x00007ffcee2f0000 - 0x00007ffcee48c000 	C:\WINDOWS\system32\dcomp.dll
+0x00007ffcedf90000 - 0x00007ffcee29b000 	C:\WINDOWS\system32\d3d11.dll
+0x00007ffcef9e0000 - 0x00007ffcefa9b000 	C:\WINDOWS\system32\dxgi.dll
+0x00007ffceede0000 - 0x00007ffceef98000 	C:\WINDOWS\system32\twinapi.appcore.dll
+0x00007ffceefd0000 - 0x00007ffceeff1000 	C:\WINDOWS\system32\RMCLIENT.dll
+0x00007ffce3710000 - 0x00007ffce3744000 	C:\Program Files\Common Files\Microsoft Shared\Ink\rtscom.dll
+0x00007ffce7ea0000 - 0x00007ffce7f37000 	C:\WINDOWS\System32\TextInputFramework.dll
+0x00007ffcee490000 - 0x00007ffcee56a000 	C:\WINDOWS\System32\CoreMessaging.dll
+0x00007ffcea1b0000 - 0x00007ffcea4ce000 	C:\WINDOWS\System32\CoreUIComponents.dll
+0x00007ffcefc40000 - 0x00007ffcefc71000 	C:\WINDOWS\SYSTEM32\ntmarta.dll
+0x00007ffcecc00000 - 0x00007ffcecd4d000 	C:\WINDOWS\SYSTEM32\wintypes.dll
+0x00007ffcddcc0000 - 0x00007ffcddd2b000 	C:\WINDOWS\system32\Oleacc.dll
+0x000000005b730000 - 0x000000005b742000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\prism_common.dll
+0x000000005b6b0000 - 0x000000005b724000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\glib-lite.dll
+0x000000005b610000 - 0x000000005b6ac000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\gstreamer-lite.dll
+0x00007ffceadc0000 - 0x00007ffceae4f000 	C:\WINDOWS\SYSTEM32\DSOUND.dll
+0x000000005b5e0000 - 0x000000005b606000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\jfxmedia.dll
+0x000000005c5c0000 - 0x000000005c5da000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\net.dll
+0x00007ffcf0370000 - 0x00007ffcf03d6000 	C:\WINDOWS\system32\mswsock.dll
+0x000000005c5a0000 - 0x000000005c5b1000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\nio.dll
+0x00007ffcf0a50000 - 0x00007ffcf0a80000 	C:\WINDOWS\SYSTEM32\SspiCli.dll
+0x000000005b5a0000 - 0x000000005b5d1000 	C:\Program Files\Java\jdk1.8.0_181\jre\bin\fxplugins.dll
+0x00007ffcea620000 - 0x00007ffcea696000 	C:\WINDOWS\System32\MMDevApi.dll
+0x00007ffcf0900000 - 0x00007ffcf0927000 	C:\WINDOWS\System32\DEVOBJ.dll
+0x00007ffcec0a0000 - 0x00007ffcec254000 	C:\WINDOWS\System32\PROPSYS.dll
+0x00007ffce8e00000 - 0x00007ffce8f2c000 	C:\WINDOWS\SYSTEM32\AUDIOSES.DLL
+0x00007ffcec750000 - 0x00007ffcec75a000 	C:\WINDOWS\SYSTEM32\AVRT.dll
+0x00007ffce04e0000 - 0x00007ffce0509000 	C:\Windows\System32\qasf.dll
+0x00007ffced1f0000 - 0x00007ffced1fa000 	C:\Windows\System32\msdmo.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: C:\Users\lolil\Documents\NetBeansProjects\Reproductor\dist\run780987432\Reproductor.jar
+java_class_path (initial): C:\Users\lolil\Documents\NetBeansProjects\Reproductor\dist\run780987432\Reproductor.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\
+USERNAME=lolil
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 17134 (10.0.17134.1)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 8319000k(666332k free), swap 8319000k(2256k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.181-b13) for windows-amd64 JRE (1.8.0_181-b13), built on Jul  7 2018 04:01:33 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Tue Sep 04 22:22:16 2018
+elapsed time: 10 seconds (0d 0h 0m 10s)
+
